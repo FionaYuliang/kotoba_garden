@@ -1,0 +1,5832 @@
+[
+  {
+    "id": 1,
+    "kanji": "模範",
+    "kana": "もはん",
+    "romaji": "mohan",
+    "kana_normalized": "もはん",
+    "romaji_normalized": "mohan",
+    "kanji_chars": [
+      "模",
+      "範"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 2,
+    "kanji": "模様",
+    "kana": "もよう",
+    "romaji": "moyou",
+    "kana_normalized": "もよう",
+    "romaji_normalized": "moyou",
+    "kanji_chars": [
+      "模",
+      "様"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "kanji": "様子",
+    "kana": "ようす",
+    "romaji": "yousu",
+    "kana_normalized": "ようす",
+    "romaji_normalized": "yousu",
+    "kanji_chars": [
+      "様",
+      "子"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "kanji": "容姿",
+    "kana": "ようし",
+    "romaji": "youshi",
+    "kana_normalized": "ようし",
+    "romaji_normalized": "youshi",
+    "kanji_chars": [
+      "容",
+      "姿"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "kanji": "姿勢",
+    "kana": "しせい",
+    "romaji": "shisei",
+    "kana_normalized": "しせい",
+    "romaji_normalized": "shisei",
+    "kanji_chars": [
+      "姿",
+      "勢"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 6,
+    "kanji": "格好",
+    "kana": "かっこう",
+    "romaji": "kakkou",
+    "kana_normalized": "かっこう",
+    "romaji_normalized": "kakkou",
+    "kanji_chars": [
+      "格",
+      "好"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 7,
+    "kanji": "格安",
+    "kana": "かくやす",
+    "romaji": "kakuyasu",
+    "kana_normalized": "かくやす",
+    "romaji_normalized": "kakuyasu",
+    "kanji_chars": [
+      "格",
+      "安"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 8,
+    "kanji": "安易",
+    "kana": "あんい",
+    "romaji": "ani",
+    "kana_normalized": "あんい",
+    "romaji_normalized": "ani",
+    "kanji_chars": [
+      "安",
+      "易"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 9,
+    "kanji": "依頼",
+    "kana": "いらい",
+    "romaji": "irai",
+    "kana_normalized": "いらい",
+    "romaji_normalized": "irai",
+    "kanji_chars": [
+      "依",
+      "頼"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 10,
+    "kanji": "信頼",
+    "kana": "しんらい",
+    "romaji": "shinrai",
+    "kana_normalized": "しんらい",
+    "romaji_normalized": "shinrai",
+    "kanji_chars": [
+      "信",
+      "頼"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 11,
+    "kanji": "信仰",
+    "kana": "しんこう",
+    "romaji": "shinkou",
+    "kana_normalized": "しんこう",
+    "romaji_normalized": "shinkou",
+    "kanji_chars": [
+      "信",
+      "仰"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 12,
+    "kanji": "頑固",
+    "kana": "がんこ",
+    "romaji": "ganko",
+    "kana_normalized": "がんこ",
+    "romaji_normalized": "ganko",
+    "kanji_chars": [
+      "頑",
+      "固"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 13,
+    "kanji": "頑丈",
+    "kana": "がんじょう",
+    "romaji": "ganjou",
+    "kana_normalized": "がんじょう",
+    "romaji_normalized": "ganjou",
+    "kanji_chars": [
+      "頑",
+      "丈"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 14,
+    "kanji": "評判",
+    "kana": "ひょうばん",
+    "romaji": "hyouban",
+    "kana_normalized": "ひょうばん",
+    "romaji_normalized": "hyouban",
+    "kanji_chars": [
+      "評",
+      "判"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 15,
+    "kanji": "批評",
+    "kana": "ひひょう",
+    "romaji": "hihyou",
+    "kana_normalized": "ひひょう",
+    "romaji_normalized": "hihyou",
+    "kanji_chars": [
+      "批",
+      "評"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 16,
+    "kanji": "評価",
+    "kana": "ひょうか",
+    "romaji": "hyouka",
+    "kana_normalized": "ひょうか",
+    "romaji_normalized": "hyouka",
+    "kanji_chars": [
+      "評",
+      "価"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 17,
+    "kanji": "形式",
+    "kana": "けいしき",
+    "romaji": "keishiki",
+    "kana_normalized": "けいしき",
+    "romaji_normalized": "keishiki",
+    "kanji_chars": [
+      "形",
+      "式"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 18,
+    "kanji": "景色",
+    "kana": "けしき",
+    "romaji": "keshiki",
+    "kana_normalized": "けしき",
+    "romaji_normalized": "keshiki",
+    "kanji_chars": [
+      "景",
+      "色"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 19,
+    "kanji": "特色",
+    "kana": "とくしょく",
+    "romaji": "tokushoku",
+    "kana_normalized": "とくしょく",
+    "romaji_normalized": "tokushoku",
+    "kanji_chars": [
+      "特",
+      "色"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 20,
+    "kanji": "特徴",
+    "kana": "とくちょう",
+    "romaji": "tokuchou",
+    "kana_normalized": "とくちょう",
+    "romaji_normalized": "tokuchou",
+    "kanji_chars": [
+      "特",
+      "徴"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 21,
+    "kanji": "独特",
+    "kana": "どくとく",
+    "romaji": "dokutoku",
+    "kana_normalized": "どくとく",
+    "romaji_normalized": "dokutoku",
+    "kanji_chars": [
+      "独",
+      "特"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 22,
+    "kanji": "情報",
+    "kana": "じょうほう",
+    "romaji": "jouhou",
+    "kana_normalized": "じょうほう",
+    "romaji_normalized": "jouhou",
+    "kanji_chars": [
+      "情",
+      "報"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 23,
+    "kanji": "報告",
+    "kana": "ほうこく",
+    "romaji": "houkoku",
+    "kana_normalized": "ほうこく",
+    "romaji_normalized": "houkoku",
+    "kanji_chars": [
+      "報",
+      "告"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 24,
+    "kanji": "告白",
+    "kana": "こくはく",
+    "romaji": "kokuhaku",
+    "kana_normalized": "こくはく",
+    "romaji_normalized": "kokuhaku",
+    "kanji_chars": [
+      "告",
+      "白"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 25,
+    "kanji": "納得",
+    "kana": "なっとく",
+    "romaji": "nattoku",
+    "kana_normalized": "なっとく",
+    "romaji_normalized": "nattoku",
+    "kanji_chars": [
+      "納",
+      "得"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 26,
+    "kanji": "納付",
+    "kana": "のうふ",
+    "romaji": "noufu",
+    "kana_normalized": "のうふ",
+    "romaji_normalized": "noufu",
+    "kanji_chars": [
+      "納",
+      "付"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 27,
+    "kanji": "収納",
+    "kana": "しゅうのう",
+    "romaji": "shuunou",
+    "kana_normalized": "しゅうのう",
+    "romaji_normalized": "shuunou",
+    "kanji_chars": [
+      "収",
+      "納"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 28,
+    "kanji": "収穫",
+    "kana": "しゅうかく",
+    "romaji": "shuukaku",
+    "kana_normalized": "しゅうかく",
+    "romaji_normalized": "shuukaku",
+    "kanji_chars": [
+      "収",
+      "穫"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 29,
+    "kanji": "吸収",
+    "kana": "きゅうしゅう",
+    "romaji": "kyuushuu",
+    "kana_normalized": "きゅうしゅう",
+    "romaji_normalized": "kyuushuu",
+    "kanji_chars": [
+      "吸",
+      "収"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 30,
+    "kanji": "領収書",
+    "kana": "りょうしゅうしょ",
+    "romaji": "ryoushuusho",
+    "kana_normalized": "りょうしゅうしょ",
+    "romaji_normalized": "ryoushuusho",
+    "kanji_chars": [
+      "領",
+      "収",
+      "書"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 31,
+    "kanji": "普及",
+    "kana": "ふきゅう",
+    "romaji": "fukyuu",
+    "kana_normalized": "ふきゅう",
+    "romaji_normalized": "fukyuu",
+    "kanji_chars": [
+      "普",
+      "及"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 32,
+    "kanji": "至急",
+    "kana": "しきゅう",
+    "romaji": "shikyuu",
+    "kana_normalized": "しきゅう",
+    "romaji_normalized": "shikyuu",
+    "kanji_chars": [
+      "至",
+      "急"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 33,
+    "kanji": "地球",
+    "kana": "ちきゅう",
+    "romaji": "chikyuu",
+    "kana_normalized": "ちきゅう",
+    "romaji_normalized": "chikyuu",
+    "kanji_chars": [
+      "地",
+      "球"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 34,
+    "kanji": "導入",
+    "kana": "どうにゅう",
+    "romaji": "dounyuu",
+    "kana_normalized": "どうにゅう",
+    "romaji_normalized": "dounyuu",
+    "kanji_chars": [
+      "導",
+      "入"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 35,
+    "kanji": "輸送",
+    "kana": "ゆそう",
+    "romaji": "yusou",
+    "kana_normalized": "ゆそう",
+    "romaji_normalized": "yusou",
+    "kanji_chars": [
+      "輸",
+      "送"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 36,
+    "kanji": "郵送",
+    "kana": "ゆうそう",
+    "romaji": "yuusou",
+    "kana_normalized": "ゆうそう",
+    "romaji_normalized": "yuusou",
+    "kanji_chars": [
+      "郵",
+      "送"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 37,
+    "kanji": "寄付",
+    "kana": "きふ",
+    "romaji": "kifu",
+    "kana_normalized": "きふ",
+    "romaji_normalized": "kifu",
+    "kanji_chars": [
+      "寄",
+      "付"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 38,
+    "kanji": "付属",
+    "kana": "ふぞく",
+    "romaji": "fuzoku",
+    "kana_normalized": "ふぞく",
+    "romaji_normalized": "fuzoku",
+    "kanji_chars": [
+      "付",
+      "属"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 39,
+    "kanji": "添付",
+    "kana": "てんぷ",
+    "romaji": "tenpu",
+    "kana_normalized": "てんぷ",
+    "romaji_normalized": "tenpu",
+    "kanji_chars": [
+      "添",
+      "付"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 40,
+    "kanji": "提案",
+    "kana": "ていあん",
+    "romaji": "teian",
+    "kana_normalized": "ていあん",
+    "romaji_normalized": "teian",
+    "kanji_chars": [
+      "提",
+      "案"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 41,
+    "kanji": "案内",
+    "kana": "あんない",
+    "romaji": "annai",
+    "kana_normalized": "あんない",
+    "romaji_normalized": "annai",
+    "kanji_chars": [
+      "案",
+      "内"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 42,
+    "kanji": "参照",
+    "kana": "さんしょう",
+    "romaji": "sanshou",
+    "kana_normalized": "さんしょう",
+    "romaji_normalized": "sanshou",
+    "kanji_chars": [
+      "参",
+      "照"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 43,
+    "kanji": "参考",
+    "kana": "さんこう",
+    "romaji": "sankou",
+    "kana_normalized": "さんこう",
+    "romaji_normalized": "sankou",
+    "kanji_chars": [
+      "参",
+      "考"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 44,
+    "kanji": "考慮",
+    "kana": "こうりょ",
+    "romaji": "kouryo",
+    "kana_normalized": "こうりょ",
+    "romaji_normalized": "kouryo",
+    "kanji_chars": [
+      "考",
+      "慮"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 45,
+    "kanji": "配慮",
+    "kana": "はいりょ",
+    "romaji": "hairyo",
+    "kana_normalized": "はいりょ",
+    "romaji_normalized": "hairyo",
+    "kanji_chars": [
+      "配",
+      "慮"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 46,
+    "kanji": "遠慮",
+    "kana": "えんりょ",
+    "romaji": "enryo",
+    "kana_normalized": "えんりょ",
+    "romaji_normalized": "enryo",
+    "kanji_chars": [
+      "遠",
+      "慮"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 47,
+    "kanji": "柔軟",
+    "kana": "じゅうなん",
+    "romaji": "juunan",
+    "kana_normalized": "じゅうなん",
+    "romaji_normalized": "juunan",
+    "kanji_chars": [
+      "柔",
+      "軟"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 48,
+    "kanji": "軟弱",
+    "kana": "なんじゃく",
+    "romaji": "nanjaku",
+    "kana_normalized": "なんじゃく",
+    "romaji_normalized": "nanjaku",
+    "kanji_chars": [
+      "軟",
+      "弱"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 49,
+    "kanji": "曖昧",
+    "kana": "あいまい",
+    "romaji": "aimai",
+    "kana_normalized": "あいまい",
+    "romaji_normalized": "aimai",
+    "kanji_chars": [
+      "曖",
+      "昧"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 50,
+    "kanji": "丁寧",
+    "kana": "ていねい",
+    "romaji": "teinei",
+    "kana_normalized": "ていねい",
+    "romaji_normalized": "teinei",
+    "kanji_chars": [
+      "丁",
+      "寧"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 51,
+    "kanji": "挨拶",
+    "kana": "あいさつ",
+    "romaji": "aisatsu",
+    "kana_normalized": "あいさつ",
+    "romaji_normalized": "aisatsu",
+    "kanji_chars": [
+      "挨",
+      "拶"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 52,
+    "kanji": "抵抗",
+    "kana": "ていこう",
+    "romaji": "teikou",
+    "kana_normalized": "ていこう",
+    "romaji_normalized": "teikou",
+    "kanji_chars": [
+      "抵",
+      "抗"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 53,
+    "kanji": "避難",
+    "kana": "ひなん",
+    "romaji": "hinan",
+    "kana_normalized": "ひなん",
+    "romaji_normalized": "hinan",
+    "kanji_chars": [
+      "避",
+      "難"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 54,
+    "kanji": "契機",
+    "kana": "けいき",
+    "romaji": "keiki",
+    "kana_normalized": "けいき",
+    "romaji_normalized": "keiki",
+    "kanji_chars": [
+      "契",
+      "機"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 55,
+    "kanji": "優先",
+    "kana": "ゆうせん",
+    "romaji": "yuusen",
+    "kana_normalized": "ゆうせん",
+    "romaji_normalized": "yuusen",
+    "kanji_chars": [
+      "優",
+      "先"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 56,
+    "kanji": "乾燥",
+    "kana": "かんそう",
+    "romaji": "kansou",
+    "kana_normalized": "かんそう",
+    "romaji_normalized": "kansou",
+    "kanji_chars": [
+      "乾",
+      "燥"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 57,
+    "kanji": "礼儀",
+    "kana": "れいぎ",
+    "romaji": "reigi",
+    "kana_normalized": "れいぎ",
+    "romaji_normalized": "reigi",
+    "kanji_chars": [
+      "礼",
+      "儀"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 58,
+    "kanji": "掲載",
+    "kana": "けいさい",
+    "romaji": "keisai",
+    "kana_normalized": "けいさい",
+    "romaji_normalized": "keisai",
+    "kanji_chars": [
+      "掲",
+      "載"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 59,
+    "kanji": "深刻",
+    "kana": "しんこく",
+    "romaji": "shinkoku",
+    "kana_normalized": "しんこく",
+    "romaji_normalized": "shinkoku",
+    "kanji_chars": [
+      "深",
+      "刻"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 60,
+    "kanji": "治療",
+    "kana": "ちりょう",
+    "romaji": "chiryou",
+    "kana_normalized": "ちりょう",
+    "romaji_normalized": "chiryou",
+    "kanji_chars": [
+      "治",
+      "療"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 61,
+    "kanji": "運賃",
+    "kana": "うんちん",
+    "romaji": "unchin",
+    "kana_normalized": "うんちん",
+    "romaji_normalized": "unchin",
+    "kanji_chars": [
+      "運",
+      "賃"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 62,
+    "kanji": "撮影",
+    "kana": "さつえい",
+    "romaji": "satsuei",
+    "kana_normalized": "さつえい",
+    "romaji_normalized": "satsuei",
+    "kanji_chars": [
+      "撮",
+      "影"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 63,
+    "kanji": "角度",
+    "kana": "かくど",
+    "romaji": "kakudo",
+    "kana_normalized": "かくど",
+    "romaji_normalized": "kakudo",
+    "kanji_chars": [
+      "角",
+      "度"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 64,
+    "kanji": "象徴",
+    "kana": "しょうちょう",
+    "romaji": "shouchou",
+    "kana_normalized": "しょうちょう",
+    "romaji_normalized": "shouchou",
+    "kanji_chars": [
+      "象",
+      "徴"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 65,
+    "kanji": "範囲",
+    "kana": "はんい",
+    "romaji": "han'i",
+    "kana_normalized": "はんい",
+    "romaji_normalized": "hani",
+    "kanji_chars": [
+      "範",
+      "囲"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 66,
+    "kanji": "距離",
+    "kana": "きょり",
+    "romaji": "kyori",
+    "kana_normalized": "きょり",
+    "romaji_normalized": "kyori",
+    "kanji_chars": [
+      "距",
+      "離"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 67,
+    "kanji": "豊富",
+    "kana": "ほうふ",
+    "romaji": "houfu",
+    "kana_normalized": "ほうふ",
+    "romaji_normalized": "houfu",
+    "kanji_chars": [
+      "豊",
+      "富"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 68,
+    "kanji": "福祉",
+    "kana": "ふくし",
+    "romaji": "fukushi",
+    "kana_normalized": "ふくし",
+    "romaji_normalized": "fukushi",
+    "kanji_chars": [
+      "福",
+      "祉"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 69,
+    "kanji": "削除",
+    "kana": "さくじょ",
+    "romaji": "sakujo",
+    "kana_normalized": "さくじょ",
+    "romaji_normalized": "sakujo",
+    "kanji_chars": [
+      "削",
+      "除"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 70,
+    "kanji": "夢中",
+    "kana": "むちゅう",
+    "romaji": "muchuu",
+    "kana_normalized": "むちゅう",
+    "romaji_normalized": "muchuu",
+    "kanji_chars": [
+      "夢",
+      "中"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 71,
+    "kanji": "強引",
+    "kana": "ごういん",
+    "romaji": "gouin",
+    "kana_normalized": "ごういん",
+    "romaji_normalized": "gouin",
+    "kanji_chars": [
+      "強",
+      "引"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 72,
+    "kanji": "奇妙",
+    "kana": "きみょう",
+    "romaji": "kimyou",
+    "kana_normalized": "きみょう",
+    "romaji_normalized": "kimyou",
+    "kanji_chars": [
+      "奇",
+      "妙"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 73,
+    "kanji": "矛盾",
+    "kana": "むじゅん",
+    "romaji": "mujun",
+    "kana_normalized": "むじゅん",
+    "romaji_normalized": "mujun",
+    "kanji_chars": [
+      "矛",
+      "盾"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 74,
+    "kanji": "返却",
+    "kana": "へんきゃく",
+    "romaji": "henkyaku",
+    "kana_normalized": "へんきゃく",
+    "romaji_normalized": "henkyaku",
+    "kanji_chars": [
+      "返",
+      "却"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 75,
+    "kanji": "編曲",
+    "kana": "へんきょく",
+    "romaji": "henkyoku",
+    "kana_normalized": "へんきょく",
+    "romaji_normalized": "henkyoku",
+    "kanji_chars": [
+      "編",
+      "曲"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 76,
+    "kanji": "組織",
+    "kana": "そしき",
+    "romaji": "soshiki",
+    "kana_normalized": "そしき",
+    "romaji_normalized": "soshiki",
+    "kanji_chars": [
+      "組",
+      "織"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 77,
+    "kanji": "愚痴",
+    "kana": "ぐち",
+    "romaji": "guchi",
+    "kana_normalized": "ぐち",
+    "romaji_normalized": "guchi",
+    "kanji_chars": [
+      "愚",
+      "痴"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 78,
+    "kanji": "冷静",
+    "kana": "れいせい",
+    "romaji": "reisei",
+    "kana_normalized": "れいせい",
+    "romaji_normalized": "reisei",
+    "kanji_chars": [
+      "冷",
+      "静"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 79,
+    "kanji": "歓迎",
+    "kana": "かんげい",
+    "romaji": "kangei",
+    "kana_normalized": "かんげい",
+    "romaji_normalized": "kangei",
+    "kanji_chars": [
+      "歓",
+      "迎"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 80,
+    "kanji": "勧誘",
+    "kana": "かんゆう",
+    "romaji": "kanyuu",
+    "kana_normalized": "かんゆう",
+    "romaji_normalized": "kanyuu",
+    "kanji_chars": [
+      "勧",
+      "誘"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 81,
+    "kanji": "立派",
+    "kana": "りっぱ",
+    "romaji": "rippa",
+    "kana_normalized": "りっぱ",
+    "romaji_normalized": "rippa",
+    "kanji_chars": [
+      "立",
+      "派"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 82,
+    "kanji": "印刷",
+    "kana": "いんさつ",
+    "romaji": "insatsu",
+    "kana_normalized": "いんさつ",
+    "romaji_normalized": "insatsu",
+    "kanji_chars": [
+      "印",
+      "刷"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 83,
+    "kanji": "真剣",
+    "kana": "しんけん",
+    "romaji": "shinken",
+    "kana_normalized": "しんけん",
+    "romaji_normalized": "shinken",
+    "kanji_chars": [
+      "真",
+      "剣"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 84,
+    "kanji": "即座",
+    "kana": "そくざ",
+    "romaji": "sokuza",
+    "kana_normalized": "そくざ",
+    "romaji_normalized": "sokuza",
+    "kanji_chars": [
+      "即",
+      "座"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 85,
+    "kanji": "中継",
+    "kana": "ちゅうけい",
+    "romaji": "chuukei",
+    "kana_normalized": "ちゅうけい",
+    "romaji_normalized": "chuukei",
+    "kanji_chars": [
+      "中",
+      "継"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 86,
+    "kanji": "贅沢",
+    "kana": "ぜいたく",
+    "romaji": "zeitaku",
+    "kana_normalized": "ぜいたく",
+    "romaji_normalized": "zeitaku",
+    "kanji_chars": [
+      "贅",
+      "沢"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 87,
+    "kanji": "幼稚",
+    "kana": "ようち",
+    "romaji": "youchi",
+    "kana_normalized": "ようち",
+    "romaji_normalized": "youchi",
+    "kanji_chars": [
+      "幼",
+      "稚"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 88,
+    "kanji": "批判",
+    "kana": "ひはん",
+    "romaji": "hihan",
+    "kana_normalized": "ひはん",
+    "romaji_normalized": "hihan",
+    "kanji_chars": [
+      "批",
+      "判"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 89,
+    "kanji": "体格",
+    "kana": "たいかく",
+    "romaji": "taikaku",
+    "kana_normalized": "たいかく",
+    "romaji_normalized": "taikaku",
+    "kanji_chars": [
+      "体",
+      "格"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 90,
+    "kanji": "異常",
+    "kana": "いじょう",
+    "romaji": "ijou",
+    "kana_normalized": "いじょう",
+    "romaji_normalized": "ijou",
+    "kanji_chars": [
+      "異",
+      "常"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 91,
+    "kanji": "極端",
+    "kana": "きょくたん",
+    "romaji": "kyokutan",
+    "kana_normalized": "きょくたん",
+    "romaji_normalized": "kyokutan",
+    "kanji_chars": [
+      "極",
+      "端"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 92,
+    "kanji": "貿易",
+    "kana": "ぼうえき",
+    "romaji": "boueki",
+    "kana_normalized": "ぼうえき",
+    "romaji_normalized": "boueki",
+    "kanji_chars": [
+      "貿",
+      "易"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 93,
+    "kanji": "我慢",
+    "kana": "がまん",
+    "romaji": "gaman",
+    "kana_normalized": "がまん",
+    "romaji_normalized": "gaman",
+    "kanji_chars": [
+      "我",
+      "慢"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 94,
+    "kanji": "支持",
+    "kana": "しじ",
+    "romaji": "shiji",
+    "kana_normalized": "しじ",
+    "romaji_normalized": "shiji",
+    "kanji_chars": [
+      "支",
+      "持"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 95,
+    "kanji": "許可",
+    "kana": "きょか",
+    "romaji": "kyoka",
+    "kana_normalized": "きょか",
+    "romaji_normalized": "kyoka",
+    "kanji_chars": [
+      "許",
+      "可"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 96,
+    "kanji": "円満",
+    "kana": "えんまん",
+    "romaji": "enman",
+    "kana_normalized": "えんまん",
+    "romaji_normalized": "enman",
+    "kanji_chars": [
+      "円",
+      "満"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 97,
+    "kanji": "恐怖",
+    "kana": "きょうふ",
+    "romaji": "kyoufu",
+    "kana_normalized": "きょうふ",
+    "romaji_normalized": "kyoufu",
+    "kanji_chars": [
+      "恐",
+      "怖"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 98,
+    "kanji": "拒否",
+    "kana": "きょひ",
+    "romaji": "kyohi",
+    "kana_normalized": "きょひ",
+    "romaji_normalized": "kyohi",
+    "kanji_chars": [
+      "拒",
+      "否"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 99,
+    "kanji": "幻想",
+    "kana": "げんそう",
+    "romaji": "gensou",
+    "kana_normalized": "げんそう",
+    "romaji_normalized": "gensou",
+    "kanji_chars": [
+      "幻",
+      "想"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 100,
+    "kanji": "可哀想",
+    "kana": "かわいそう",
+    "romaji": "kawaisou",
+    "kana_normalized": "かわいそう",
+    "romaji_normalized": "kawaisou",
+    "kanji_chars": [
+      "可",
+      "哀",
+      "想"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 101,
+    "kanji": "指摘",
+    "kana": "してき",
+    "romaji": "shiteki",
+    "kana_normalized": "してき",
+    "romaji_normalized": "shiteki",
+    "kanji_chars": [
+      "指",
+      "摘"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 102,
+    "kanji": "栽培",
+    "kana": "さいばい",
+    "romaji": "saibai",
+    "kana_normalized": "さいばい",
+    "romaji_normalized": "saibai",
+    "kanji_chars": [
+      "栽",
+      "培"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 103,
+    "kanji": "採集",
+    "kana": "さいしゅう",
+    "romaji": "saishuu",
+    "kana_normalized": "さいしゅう",
+    "romaji_normalized": "saishuu",
+    "kanji_chars": [
+      "採",
+      "集"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 104,
+    "kanji": "取得",
+    "kana": "しゅとく",
+    "romaji": "shutoku",
+    "kana_normalized": "しゅとく",
+    "romaji_normalized": "shutoku",
+    "kanji_chars": [
+      "取",
+      "得"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 105,
+    "kanji": "卑怯",
+    "kana": "ひきょう",
+    "romaji": "hikyou",
+    "kana_normalized": "ひきょう",
+    "romaji_normalized": "hikyou",
+    "kanji_chars": [
+      "卑",
+      "怯"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 106,
+    "kanji": "起源",
+    "kana": "きげん",
+    "romaji": "kigen",
+    "kana_normalized": "きげん",
+    "romaji_normalized": "kigen",
+    "kanji_chars": [
+      "起",
+      "源"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 107,
+    "kanji": "願望",
+    "kana": "がんぼう",
+    "romaji": "ganbou",
+    "kana_normalized": "がんぼう",
+    "romaji_normalized": "ganbou",
+    "kanji_chars": [
+      "願",
+      "望"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 108,
+    "kanji": "製造",
+    "kana": "せいぞう",
+    "romaji": "seizou",
+    "kana_normalized": "せいぞう",
+    "romaji_normalized": "seizou",
+    "kanji_chars": [
+      "製",
+      "造"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 109,
+    "kanji": "提供",
+    "kana": "ていきょう",
+    "romaji": "teikyou",
+    "kana_normalized": "ていきょう",
+    "romaji_normalized": "teikyou",
+    "kanji_chars": [
+      "提",
+      "供"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 110,
+    "kanji": "邪魔",
+    "kana": "じゃま",
+    "romaji": "jama",
+    "kana_normalized": "じゃま",
+    "romaji_normalized": "jama",
+    "kanji_chars": [
+      "邪",
+      "魔"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 111,
+    "kanji": "濃厚",
+    "kana": "のうこう",
+    "romaji": "noukou",
+    "kana_normalized": "のうこう",
+    "romaji_normalized": "noukou",
+    "kanji_chars": [
+      "濃",
+      "厚"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 112,
+    "kanji": "高級",
+    "kana": "こうきゅう",
+    "romaji": "koukyuu",
+    "kana_normalized": "こうきゅう",
+    "romaji_normalized": "koukyuu",
+    "kanji_chars": [
+      "高",
+      "級"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 113,
+    "kanji": "優秀",
+    "kana": "ゆうしゅう",
+    "romaji": "yuushuu",
+    "kana_normalized": "ゆうしゅう",
+    "romaji_normalized": "yuushuu",
+    "kanji_chars": [
+      "優",
+      "秀"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 114,
+    "kanji": "鮮明",
+    "kana": "せんめい",
+    "romaji": "senmei",
+    "kana_normalized": "せんめい",
+    "romaji_normalized": "senmei",
+    "kanji_chars": [
+      "鮮",
+      "明"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 115,
+    "kanji": "過剰",
+    "kana": "かじょう",
+    "romaji": "kajou",
+    "kana_normalized": "かじょう",
+    "romaji_normalized": "kajou",
+    "kanji_chars": [
+      "過",
+      "剰"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 116,
+    "kanji": "臆病",
+    "kana": "おくびょう",
+    "romaji": "okubyou",
+    "kana_normalized": "おくびょう",
+    "romaji_normalized": "okubyou",
+    "kanji_chars": [
+      "臆",
+      "病"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 117,
+    "kanji": "緩和",
+    "kana": "かんわ",
+    "romaji": "kanwa",
+    "kana_normalized": "かんわ",
+    "romaji_normalized": "kanwa",
+    "kanji_chars": [
+      "緩",
+      "和"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 118,
+    "kanji": "両替",
+    "kana": "りょうがえ",
+    "romaji": "ryougae",
+    "kana_normalized": "りょうがえ",
+    "romaji_normalized": "ryougae",
+    "kanji_chars": [
+      "両",
+      "替"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 119,
+    "kanji": "強化",
+    "kana": "きょうか",
+    "romaji": "kyouka",
+    "kana_normalized": "きょうか",
+    "romaji_normalized": "kyouka",
+    "kanji_chars": [
+      "強",
+      "化"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 120,
+    "kanji": "在籍",
+    "kana": "ざいせき",
+    "romaji": "zaiseki",
+    "kana_normalized": "ざいせき",
+    "romaji_normalized": "zaiseki",
+    "kanji_chars": [
+      "在",
+      "籍"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 121,
+    "kanji": "冗談",
+    "kana": "じょうだん",
+    "romaji": "joudan",
+    "kana_normalized": "じょうだん",
+    "romaji_normalized": "joudan",
+    "kanji_chars": [
+      "冗",
+      "談"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 122,
+    "kanji": "自慢",
+    "kana": "じまん",
+    "romaji": "jiman",
+    "kana_normalized": "じまん",
+    "romaji_normalized": "jiman",
+    "kanji_chars": [
+      "自",
+      "慢"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 123,
+    "kanji": "抽選",
+    "kana": "ちゅうせん",
+    "romaji": "chuusen",
+    "kana_normalized": "ちゅうせん",
+    "romaji_normalized": "chuusen",
+    "kanji_chars": [
+      "抽",
+      "選"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 124,
+    "kanji": "警備",
+    "kana": "けいび",
+    "romaji": "keibi",
+    "kana_normalized": "けいび",
+    "romaji_normalized": "keibi",
+    "kanji_chars": [
+      "警",
+      "備"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 125,
+    "kanji": "習慣",
+    "kana": "しゅうかん",
+    "romaji": "shuukan",
+    "kana_normalized": "しゅうかん",
+    "romaji_normalized": "shuukan",
+    "kanji_chars": [
+      "習",
+      "慣"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 126,
+    "kanji": "地元",
+    "kana": "じもと",
+    "romaji": "jimoto",
+    "kana_normalized": "じもと",
+    "romaji_normalized": "jimoto",
+    "kanji_chars": [
+      "地",
+      "元"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 127,
+    "kanji": "地味",
+    "kana": "じみ",
+    "romaji": "jimi",
+    "kana_normalized": "じみ",
+    "romaji_normalized": "jimi",
+    "kanji_chars": [
+      "地",
+      "味"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 128,
+    "kanji": "土台",
+    "kana": "どだい",
+    "romaji": "dodai",
+    "kana_normalized": "どだい",
+    "romaji_normalized": "dodai",
+    "kanji_chars": [
+      "土",
+      "台"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 129,
+    "kanji": "立場",
+    "kana": "たちば",
+    "romaji": "tachiba",
+    "kana_normalized": "たちば",
+    "romaji_normalized": "tachiba",
+    "kanji_chars": [
+      "立",
+      "場"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 130,
+    "kanji": "急激",
+    "kana": "きゅうげき",
+    "romaji": "kyuugeki",
+    "kana_normalized": "きゅうげき",
+    "romaji_normalized": "kyuugeki",
+    "kanji_chars": [
+      "急",
+      "激"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 131,
+    "kanji": "敏感",
+    "kana": "びんかん",
+    "romaji": "binkan",
+    "kana_normalized": "びんかん",
+    "romaji_normalized": "binkan",
+    "kanji_chars": [
+      "敏",
+      "感"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 132,
+    "kanji": "技術",
+    "kana": "ぎじゅつ",
+    "romaji": "gijutsu",
+    "kana_normalized": "ぎじゅつ",
+    "romaji_normalized": "gijutsu",
+    "kanji_chars": [
+      "技",
+      "術"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 133,
+    "kanji": "工夫",
+    "kana": "くふう",
+    "romaji": "kufuu",
+    "kana_normalized": "くふう",
+    "romaji_normalized": "kufuu",
+    "kanji_chars": [
+      "工",
+      "夫"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 134,
+    "kanji": "訓練",
+    "kana": "くんれん",
+    "romaji": "kunren",
+    "kana_normalized": "くんれん",
+    "romaji_normalized": "kunren",
+    "kanji_chars": [
+      "訓",
+      "練"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 135,
+    "kanji": "多彩",
+    "kana": "たさい",
+    "romaji": "tasai",
+    "kana_normalized": "たさい",
+    "romaji_normalized": "tasai",
+    "kanji_chars": [
+      "多",
+      "彩"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 136,
+    "kanji": "刺激",
+    "kana": "しげき",
+    "romaji": "shigeki",
+    "kana_normalized": "しげき",
+    "romaji_normalized": "shigeki",
+    "kanji_chars": [
+      "刺",
+      "激"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 137,
+    "kanji": "視界",
+    "kana": "しかい",
+    "romaji": "shikai",
+    "kana_normalized": "しかい",
+    "romaji_normalized": "shikai",
+    "kanji_chars": [
+      "視",
+      "界"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 138,
+    "kanji": "視野",
+    "kana": "しや",
+    "romaji": "shiya",
+    "kana_normalized": "しや",
+    "romaji_normalized": "shiya",
+    "kanji_chars": [
+      "視",
+      "野"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 139,
+    "kanji": "視線",
+    "kana": "しせん",
+    "romaji": "shisen",
+    "kana_normalized": "しせん",
+    "romaji_normalized": "shisen",
+    "kanji_chars": [
+      "視",
+      "線"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 140,
+    "kanji": "視察",
+    "kana": "しさつ",
+    "romaji": "shisatsu",
+    "kana_normalized": "しさつ",
+    "romaji_normalized": "shisatsu",
+    "kanji_chars": [
+      "視",
+      "察"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 141,
+    "kanji": "視点",
+    "kana": "してん",
+    "romaji": "shiten",
+    "kana_normalized": "してん",
+    "romaji_normalized": "shiten",
+    "kanji_chars": [
+      "視",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 142,
+    "kanji": "欠点",
+    "kana": "けってん",
+    "romaji": "ketten",
+    "kana_normalized": "けってん",
+    "romaji_normalized": "ketten",
+    "kanji_chars": [
+      "欠",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 143,
+    "kanji": "弱点",
+    "kana": "じゃくてん",
+    "romaji": "jakuten",
+    "kana_normalized": "じゃくてん",
+    "romaji_normalized": "jakuten",
+    "kanji_chars": [
+      "弱",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 144,
+    "kanji": "点検",
+    "kana": "てんけん",
+    "romaji": "tenken",
+    "kana_normalized": "てんけん",
+    "romaji_normalized": "tenken",
+    "kanji_chars": [
+      "点",
+      "検"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 145,
+    "kanji": "得点",
+    "kana": "とくてん",
+    "romaji": "tokuten",
+    "kana_normalized": "とくてん",
+    "romaji_normalized": "tokuten",
+    "kanji_chars": [
+      "得",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 146,
+    "kanji": "焦点",
+    "kana": "しょうてん",
+    "romaji": "shouten",
+    "kana_normalized": "しょうてん",
+    "romaji_normalized": "shouten",
+    "kanji_chars": [
+      "焦",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 147,
+    "kanji": "終点",
+    "kana": "しゅうてん",
+    "romaji": "shuuten",
+    "kana_normalized": "しゅうてん",
+    "romaji_normalized": "shuuten",
+    "kanji_chars": [
+      "終",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 148,
+    "kanji": "重点",
+    "kana": "じゅうてん",
+    "romaji": "juuten",
+    "kana_normalized": "じゅうてん",
+    "romaji_normalized": "juuten",
+    "kanji_chars": [
+      "重",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 149,
+    "kanji": "慎重",
+    "kana": "しんちょう",
+    "romaji": "shinchou",
+    "kana_normalized": "しんちょう",
+    "romaji_normalized": "shinchou",
+    "kanji_chars": [
+      "慎",
+      "重"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 150,
+    "kanji": "貴重",
+    "kana": "きちょう",
+    "romaji": "kichou",
+    "kana_normalized": "きちょう",
+    "romaji_normalized": "kichou",
+    "kanji_chars": [
+      "貴",
+      "重"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 151,
+    "kanji": "尊重",
+    "kana": "そんちょう",
+    "romaji": "sonchou",
+    "kana_normalized": "そんちょう",
+    "romaji_normalized": "sonchou",
+    "kanji_chars": [
+      "尊",
+      "重"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 152,
+    "kanji": "利点",
+    "kana": "りてん",
+    "romaji": "riten",
+    "kana_normalized": "りてん",
+    "romaji_normalized": "riten",
+    "kanji_chars": [
+      "利",
+      "点"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 153,
+    "kanji": "権利",
+    "kana": "けんり",
+    "romaji": "kenri",
+    "kana_normalized": "けんり",
+    "romaji_normalized": "kenri",
+    "kanji_chars": [
+      "権",
+      "利"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 154,
+    "kanji": "勝利",
+    "kana": "しょうり",
+    "romaji": "shouri",
+    "kana_normalized": "しょうり",
+    "romaji_normalized": "shouri",
+    "kanji_chars": [
+      "勝",
+      "利"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 155,
+    "kanji": "有利",
+    "kana": "ゆうり",
+    "romaji": "yuuri",
+    "kana_normalized": "ゆうり",
+    "romaji_normalized": "yuuri",
+    "kanji_chars": [
+      "有",
+      "利"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 156,
+    "kanji": "利口",
+    "kana": "りこう",
+    "romaji": "rikou",
+    "kana_normalized": "りこう",
+    "romaji_normalized": "rikou",
+    "kanji_chars": [
+      "利",
+      "口"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 157,
+    "kanji": "無口",
+    "kana": "むくち",
+    "romaji": "mukuchi",
+    "kana_normalized": "むくち",
+    "romaji_normalized": "mukuchi",
+    "kanji_chars": [
+      "無",
+      "口"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 158,
+    "kanji": "無事",
+    "kana": "ぶじ",
+    "romaji": "buji",
+    "kana_normalized": "ぶじ",
+    "romaji_normalized": "buji",
+    "kanji_chars": [
+      "無",
+      "事"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 159,
+    "kanji": "行事",
+    "kana": "ぎょうじ",
+    "romaji": "gyouji",
+    "kana_normalized": "ぎょうじ",
+    "romaji_normalized": "gyouji",
+    "kanji_chars": [
+      "行",
+      "事"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 160,
+    "kanji": "流行",
+    "kana": "りゅうこう",
+    "romaji": "ryuukou",
+    "kana_normalized": "りゅうこう",
+    "romaji_normalized": "ryuukou",
+    "kanji_chars": [
+      "流",
+      "行"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 161,
+    "kanji": "行方",
+    "kana": "ゆくえ",
+    "romaji": "yukue",
+    "kana_normalized": "ゆくえ",
+    "romaji_normalized": "yukue",
+    "kanji_chars": [
+      "行",
+      "方"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 162,
+    "kanji": "移行",
+    "kana": "いこう",
+    "romaji": "ikou",
+    "kana_normalized": "いこう",
+    "romaji_normalized": "ikou",
+    "kanji_chars": [
+      "移",
+      "行"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 163,
+    "kanji": "移動",
+    "kana": "いどう",
+    "romaji": "idou",
+    "kana_normalized": "いどう",
+    "romaji_normalized": "idou",
+    "kanji_chars": [
+      "移",
+      "動"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 164,
+    "kanji": "動作",
+    "kana": "どうさ",
+    "romaji": "dousa",
+    "kana_normalized": "どうさ",
+    "romaji_normalized": "dousa",
+    "kanji_chars": [
+      "動",
+      "作"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 165,
+    "kanji": "感動",
+    "kana": "かんどう",
+    "romaji": "kandou",
+    "kana_normalized": "かんどう",
+    "romaji_normalized": "kandou",
+    "kanji_chars": [
+      "感",
+      "動"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 166,
+    "kanji": "活動",
+    "kana": "かつどう",
+    "romaji": "katsudou",
+    "kana_normalized": "かつどう",
+    "romaji_normalized": "katsudou",
+    "kanji_chars": [
+      "活",
+      "動"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 167,
+    "kanji": "活躍",
+    "kana": "かつやく",
+    "romaji": "katsuyaku",
+    "kana_normalized": "かつやく",
+    "romaji_normalized": "katsuyaku",
+    "kanji_chars": [
+      "活",
+      "躍"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 168,
+    "kanji": "復活",
+    "kana": "ふっかつ",
+    "romaji": "fukkatsu",
+    "kana_normalized": "ふっかつ",
+    "romaji_normalized": "fukkatsu",
+    "kanji_chars": [
+      "復",
+      "活"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 169,
+    "kanji": "回復",
+    "kana": "かいふく",
+    "romaji": "kaifuku",
+    "kana_normalized": "かいふく",
+    "romaji_normalized": "kaifuku",
+    "kanji_chars": [
+      "回",
+      "復"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 170,
+    "kanji": "回答",
+    "kana": "かいとう",
+    "romaji": "kaitou",
+    "kana_normalized": "かいとう",
+    "romaji_normalized": "kaitou",
+    "kanji_chars": [
+      "回",
+      "答"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 171,
+    "kanji": "応答",
+    "kana": "おうとう",
+    "romaji": "outou",
+    "kana_normalized": "おうとう",
+    "romaji_normalized": "outou",
+    "kanji_chars": [
+      "応",
+      "答"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 172,
+    "kanji": "対応",
+    "kana": "たいおう",
+    "romaji": "taiou",
+    "kana_normalized": "たいおう",
+    "romaji_normalized": "taiou",
+    "kanji_chars": [
+      "対",
+      "応"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 173,
+    "kanji": "絶対",
+    "kana": "ぜったい",
+    "romaji": "zettai",
+    "kana_normalized": "ぜったい",
+    "romaji_normalized": "zettai",
+    "kanji_chars": [
+      "絶",
+      "対"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 174,
+    "kanji": "対策",
+    "kana": "たいさく",
+    "romaji": "taisaku",
+    "kana_normalized": "たいさく",
+    "romaji_normalized": "taisaku",
+    "kanji_chars": [
+      "対",
+      "策"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 175,
+    "kanji": "対比",
+    "kana": "たいひ",
+    "romaji": "taihi",
+    "kana_normalized": "たいひ",
+    "romaji_normalized": "taihi",
+    "kanji_chars": [
+      "対",
+      "比"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 176,
+    "kanji": "比較",
+    "kana": "ひかく",
+    "romaji": "hikaku",
+    "kana_normalized": "ひかく",
+    "romaji_normalized": "hikaku",
+    "kanji_chars": [
+      "比",
+      "較"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 177,
+    "kanji": "比例",
+    "kana": "ひれい",
+    "romaji": "hirei",
+    "kana_normalized": "ひれい",
+    "romaji_normalized": "hirei",
+    "kanji_chars": [
+      "比",
+      "例"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 178,
+    "kanji": "例外",
+    "kana": "れいがい",
+    "romaji": "reigai",
+    "kana_normalized": "れいがい",
+    "romaji_normalized": "reigai",
+    "kanji_chars": [
+      "例",
+      "外"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 179,
+    "kanji": "外側",
+    "kana": "そとがわ",
+    "romaji": "sotogawa",
+    "kana_normalized": "そとがわ",
+    "romaji_normalized": "sotogawa",
+    "kanji_chars": [
+      "外",
+      "側"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 180,
+    "kanji": "外見",
+    "kana": "がいけん",
+    "romaji": "gaiken",
+    "kana_normalized": "がいけん",
+    "romaji_normalized": "gaiken",
+    "kanji_chars": [
+      "外",
+      "見"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 181,
+    "kanji": "見当",
+    "kana": "けんとう",
+    "romaji": "kentou",
+    "kana_normalized": "けんとう",
+    "romaji_normalized": "kentou",
+    "kanji_chars": [
+      "見",
+      "当"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 182,
+    "kanji": "見解",
+    "kana": "けんかい",
+    "romaji": "kenkai",
+    "kana_normalized": "けんかい",
+    "romaji_normalized": "kenkai",
+    "kanji_chars": [
+      "見",
+      "解"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 183,
+    "kanji": "解消",
+    "kana": "かいしょう",
+    "romaji": "kaishou",
+    "kana_normalized": "かいしょう",
+    "romaji_normalized": "kaishou",
+    "kanji_chars": [
+      "解",
+      "消"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 184,
+    "kanji": "解約",
+    "kana": "かいやく",
+    "romaji": "kaiyaku",
+    "kana_normalized": "かいやく",
+    "romaji_normalized": "kaiyaku",
+    "kanji_chars": [
+      "解",
+      "約"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 185,
+    "kanji": "解散",
+    "kana": "かいさん",
+    "romaji": "kaisan",
+    "kana_normalized": "かいさん",
+    "romaji_normalized": "kaisan",
+    "kanji_chars": [
+      "解",
+      "散"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 186,
+    "kanji": "了解",
+    "kana": "りょうかい",
+    "romaji": "ryoukai",
+    "kana_normalized": "りょうかい",
+    "romaji_normalized": "ryoukai",
+    "kanji_chars": [
+      "了",
+      "解"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 187,
+    "kanji": "分解",
+    "kana": "ぶんかい",
+    "romaji": "bunkai",
+    "kana_normalized": "ぶんかい",
+    "romaji_normalized": "bunkai",
+    "kanji_chars": [
+      "分",
+      "解"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 188,
+    "kanji": "分別",
+    "kana": "ぶんべつ",
+    "romaji": "bunbetsu",
+    "kana_normalized": "ぶんべつ",
+    "romaji_normalized": "bunbetsu",
+    "kanji_chars": [
+      "分",
+      "別"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 189,
+    "kanji": "分担",
+    "kana": "ぶんたん",
+    "romaji": "buntan",
+    "kana_normalized": "ぶんたん",
+    "romaji_normalized": "buntan",
+    "kanji_chars": [
+      "分",
+      "担"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 190,
+    "kanji": "分配",
+    "kana": "ぶんぱい",
+    "romaji": "bunpai",
+    "kana_normalized": "ぶんぱい",
+    "romaji_normalized": "bunpai",
+    "kanji_chars": [
+      "分",
+      "配"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 191,
+    "kanji": "分野",
+    "kana": "ぶんや",
+    "romaji": "bunya",
+    "kana_normalized": "ぶんや",
+    "romaji_normalized": "bunya",
+    "kanji_chars": [
+      "分",
+      "野"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 192,
+    "kanji": "分析",
+    "kana": "ぶんせき",
+    "romaji": "bunseki",
+    "kana_normalized": "ぶんせき",
+    "romaji_normalized": "bunseki",
+    "kanji_chars": [
+      "分",
+      "析"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 193,
+    "kanji": "区分",
+    "kana": "くぶん",
+    "romaji": "kubun",
+    "kana_normalized": "くぶん",
+    "romaji_normalized": "kubun",
+    "kanji_chars": [
+      "区",
+      "分"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 194,
+    "kanji": "気分",
+    "kana": "きぶん",
+    "romaji": "kibun",
+    "kana_normalized": "きぶん",
+    "romaji_normalized": "kibun",
+    "kanji_chars": [
+      "気",
+      "分"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 195,
+    "kanji": "短気",
+    "kana": "たんき",
+    "romaji": "tanki",
+    "kana_normalized": "たんき",
+    "romaji_normalized": "tanki",
+    "kanji_chars": [
+      "短",
+      "気"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 196,
+    "kanji": "根気",
+    "kana": "こんき",
+    "romaji": "konki",
+    "kana_normalized": "こんき",
+    "romaji_normalized": "konki",
+    "kanji_chars": [
+      "根",
+      "気"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 197,
+    "kanji": "病気",
+    "kana": "びょうき",
+    "romaji": "byouki",
+    "kana_normalized": "びょうき",
+    "romaji_normalized": "byouki",
+    "kanji_chars": [
+      "病",
+      "気"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 198,
+    "kanji": "元気",
+    "kana": "げんき",
+    "romaji": "genki",
+    "kana_normalized": "げんき",
+    "romaji_normalized": "genki",
+    "kanji_chars": [
+      "元",
+      "気"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 199,
+    "kanji": "気軽",
+    "kana": "きがる",
+    "romaji": "kigaru",
+    "kana_normalized": "きがる",
+    "romaji_normalized": "kigaru",
+    "kanji_chars": [
+      "気",
+      "軽"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 200,
+    "kanji": "気配",
+    "kana": "けはい",
+    "romaji": "kehai",
+    "kana_normalized": "けはい",
+    "romaji_normalized": "kehai",
+    "kanji_chars": [
+      "気",
+      "配"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 201,
+    "kanji": "陽気",
+    "kana": "ようき",
+    "romaji": "youki",
+    "kana_normalized": "ようき",
+    "romaji_normalized": "youki",
+    "kanji_chars": [
+      "陽",
+      "気"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 202,
+    "kanji": "活気",
+    "kana": "かっき",
+    "romaji": "kakki",
+    "kana_normalized": "かっき",
+    "romaji_normalized": "kakki",
+    "kanji_chars": [
+      "活",
+      "気"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 203,
+    "kanji": "活発",
+    "kana": "かっぱつ",
+    "romaji": "kappatsu",
+    "kana_normalized": "かっぱつ",
+    "romaji_normalized": "kappatsu",
+    "kanji_chars": [
+      "活",
+      "発"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 204,
+    "kanji": "出発",
+    "kana": "しゅっぱつ",
+    "romaji": "shuppatsu",
+    "kana_normalized": "しゅっぱつ",
+    "romaji_normalized": "shuppatsu",
+    "kanji_chars": [
+      "出",
+      "発"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 205,
+    "kanji": "始発",
+    "kana": "しはつ",
+    "romaji": "shihatsu",
+    "kana_normalized": "しはつ",
+    "romaji_normalized": "shihatsu",
+    "kanji_chars": [
+      "始",
+      "発"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 206,
+    "kanji": "発生",
+    "kana": "はっせい",
+    "romaji": "hassei",
+    "kana_normalized": "はっせい",
+    "romaji_normalized": "hassei",
+    "kanji_chars": [
+      "発",
+      "生"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 207,
+    "kanji": "発明",
+    "kana": "はつめい",
+    "romaji": "hatsumei",
+    "kana_normalized": "はつめい",
+    "romaji_normalized": "hatsumei",
+    "kanji_chars": [
+      "発",
+      "明"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 208,
+    "kanji": "発言",
+    "kana": "はつげん",
+    "romaji": "hatsugen",
+    "kana_normalized": "はつげん",
+    "romaji_normalized": "hatsugen",
+    "kanji_chars": [
+      "発",
+      "言"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 209,
+    "kanji": "発達",
+    "kana": "はったつ",
+    "romaji": "hattatsu",
+    "kana_normalized": "はったつ",
+    "romaji_normalized": "hattatsu",
+    "kanji_chars": [
+      "発",
+      "達"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 210,
+    "kanji": "発想",
+    "kana": "はっそう",
+    "romaji": "hassou",
+    "kana_normalized": "はっそう",
+    "romaji_normalized": "hassou",
+    "kanji_chars": [
+      "発",
+      "想"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 211,
+    "kanji": "発展",
+    "kana": "はってん",
+    "romaji": "hatten",
+    "kana_normalized": "はってん",
+    "romaji_normalized": "hatten",
+    "kanji_chars": [
+      "発",
+      "展"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 212,
+    "kanji": "発揮",
+    "kana": "はっき",
+    "romaji": "hakki",
+    "kana_normalized": "はっき",
+    "romaji_normalized": "hakki",
+    "kanji_chars": [
+      "発",
+      "揮"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 213,
+    "kanji": "開発",
+    "kana": "かいはつ",
+    "romaji": "kaihatsu",
+    "kana_normalized": "かいはつ",
+    "romaji_normalized": "kaihatsu",
+    "kanji_chars": [
+      "開",
+      "発"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 214,
+    "kanji": "展開",
+    "kana": "てんかい",
+    "romaji": "tenkai",
+    "kana_normalized": "てんかい",
+    "romaji_normalized": "tenkai",
+    "kanji_chars": [
+      "展",
+      "開"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 215,
+    "kanji": "開幕",
+    "kana": "かいまく",
+    "romaji": "kaimaku",
+    "kana_normalized": "かいまく",
+    "romaji_normalized": "kaimaku",
+    "kanji_chars": [
+      "開",
+      "幕"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 216,
+    "kanji": "開催",
+    "kana": "かいさい",
+    "romaji": "kaisai",
+    "kana_normalized": "かいさい",
+    "romaji_normalized": "kaisai",
+    "kanji_chars": [
+      "開",
+      "催"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 217,
+    "kanji": "一生懸命",
+    "kana": "いっしょうけんめい",
+    "romaji": "isshoukenmei",
+    "kana_normalized": "いっしょうけんめい",
+    "romaji_normalized": "isshoukenmei",
+    "kanji_chars": [
+      "一",
+      "生",
+      "懸",
+      "命"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 218,
+    "kanji": "統一",
+    "kana": "とういつ",
+    "romaji": "touitsu",
+    "kana_normalized": "とういつ",
+    "romaji_normalized": "touitsu",
+    "kanji_chars": [
+      "統",
+      "一"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 219,
+    "kanji": "伝統",
+    "kana": "でんとう",
+    "romaji": "dentou",
+    "kana_normalized": "でんとう",
+    "romaji_normalized": "dentou",
+    "kanji_chars": [
+      "伝",
+      "統"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 220,
+    "kanji": "宣伝",
+    "kana": "せんでん",
+    "romaji": "senden",
+    "kana_normalized": "せんでん",
+    "romaji_normalized": "senden",
+    "kanji_chars": [
+      "宣",
+      "伝"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 221,
+    "kanji": "伝達",
+    "kana": "でんたつ",
+    "romaji": "dentatsu",
+    "kana_normalized": "でんたつ",
+    "romaji_normalized": "dentatsu",
+    "kanji_chars": [
+      "伝",
+      "達"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 222,
+    "kanji": "上達",
+    "kana": "じょうたつ",
+    "romaji": "joutatsu",
+    "kana_normalized": "じょうたつ",
+    "romaji_normalized": "joutatsu",
+    "kanji_chars": [
+      "上",
+      "達"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 223,
+    "kanji": "上位",
+    "kana": "じょうい",
+    "romaji": "joui",
+    "kana_normalized": "じょうい",
+    "romaji_normalized": "joui",
+    "kanji_chars": [
+      "上",
+      "位"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 224,
+    "kanji": "上昇",
+    "kana": "じょうしょう",
+    "romaji": "joushou",
+    "kana_normalized": "じょうしょう",
+    "romaji_normalized": "joushou",
+    "kanji_chars": [
+      "上",
+      "昇"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 225,
+    "kanji": "屋上",
+    "kana": "おくじょう",
+    "romaji": "okujou",
+    "kana_normalized": "おくじょう",
+    "romaji_normalized": "okujou",
+    "kanji_chars": [
+      "屋",
+      "上"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 226,
+    "kanji": "向上",
+    "kana": "こうじょう",
+    "romaji": "koujou",
+    "kana_normalized": "こうじょう",
+    "romaji_normalized": "koujou",
+    "kanji_chars": [
+      "向",
+      "上"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 227,
+    "kanji": "上旬",
+    "kana": "じょうじゅん",
+    "romaji": "joujun",
+    "kana_normalized": "じょうじゅん",
+    "romaji_normalized": "joujun",
+    "kanji_chars": [
+      "上",
+      "旬"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 228,
+    "kanji": "下旬",
+    "kana": "げじゅん",
+    "romaji": "gejun",
+    "kana_normalized": "げじゅん",
+    "romaji_normalized": "gejun",
+    "kanji_chars": [
+      "下",
+      "旬"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 229,
+    "kanji": "上手",
+    "kana": "じょうず",
+    "romaji": "jouzu",
+    "kana_normalized": "じょうず",
+    "romaji_normalized": "jouzu",
+    "kanji_chars": [
+      "上",
+      "手"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 230,
+    "kanji": "下手",
+    "kana": "へた",
+    "romaji": "heta",
+    "kana_normalized": "へた",
+    "romaji_normalized": "heta",
+    "kanji_chars": [
+      "下",
+      "手"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 231,
+    "kanji": "勝手",
+    "kana": "かって",
+    "romaji": "katte",
+    "kana_normalized": "かって",
+    "romaji_normalized": "katte",
+    "kanji_chars": [
+      "勝",
+      "手"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 232,
+    "kanji": "手軽",
+    "kana": "てがる",
+    "romaji": "tegaru",
+    "kana_normalized": "てがる",
+    "romaji_normalized": "tegaru",
+    "kanji_chars": [
+      "手",
+      "軽"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 233,
+    "kanji": "軽快",
+    "kana": "けいかい",
+    "romaji": "keikai",
+    "kana_normalized": "けいかい",
+    "romaji_normalized": "keikai",
+    "kanji_chars": [
+      "軽",
+      "快"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 234,
+    "kanji": "快適",
+    "kana": "かいてき",
+    "romaji": "kaiteki",
+    "kana_normalized": "かいてき",
+    "romaji_normalized": "kaiteki",
+    "kanji_chars": [
+      "快",
+      "適"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 235,
+    "kanji": "適度",
+    "kana": "てきど",
+    "romaji": "tekido",
+    "kana_normalized": "てきど",
+    "romaji_normalized": "tekido",
+    "kanji_chars": [
+      "適",
+      "度"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 236,
+    "kanji": "適切",
+    "kana": "てきせつ",
+    "romaji": "tekisetsu",
+    "kana_normalized": "てきせつ",
+    "romaji_normalized": "tekisetsu",
+    "kanji_chars": [
+      "適",
+      "切"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 237,
+    "kanji": "適応",
+    "kana": "てきおう",
+    "romaji": "tekiou",
+    "kana_normalized": "てきおう",
+    "romaji_normalized": "tekiou",
+    "kanji_chars": [
+      "適",
+      "応"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 238,
+    "kanji": "応援",
+    "kana": "おうえん",
+    "romaji": "ouen",
+    "kana_normalized": "おうえん",
+    "romaji_normalized": "ouen",
+    "kanji_chars": [
+      "応",
+      "援"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 239,
+    "kanji": "援助",
+    "kana": "えんじょ",
+    "romaji": "enjo",
+    "kana_normalized": "えんじょ",
+    "romaji_normalized": "enjo",
+    "kanji_chars": [
+      "援",
+      "助"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 240,
+    "kanji": "助言",
+    "kana": "じょげん",
+    "romaji": "jogen",
+    "kana_normalized": "じょげん",
+    "romaji_normalized": "jogen",
+    "kanji_chars": [
+      "助",
+      "言"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 241,
+    "kanji": "言語",
+    "kana": "げんご",
+    "romaji": "gengo",
+    "kana_normalized": "げんご",
+    "romaji_normalized": "gengo",
+    "kanji_chars": [
+      "言",
+      "語"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 242,
+    "kanji": "語彙",
+    "kana": "ごい",
+    "romaji": "goi",
+    "kana_normalized": "ごい",
+    "romaji_normalized": "goi",
+    "kanji_chars": [
+      "語",
+      "彙"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 243,
+    "kanji": "語源",
+    "kana": "ごげん",
+    "romaji": "gogen",
+    "kana_normalized": "ごげん",
+    "romaji_normalized": "gogen",
+    "kanji_chars": [
+      "語",
+      "源"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 244,
+    "kanji": "原爆",
+    "kana": "げんばく",
+    "romaji": "genbaku",
+    "kana_normalized": "げんばく",
+    "romaji_normalized": "genbaku",
+    "kanji_chars": [
+      "原",
+      "爆"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 245,
+    "kanji": "原材料",
+    "kana": "げんざいりょう",
+    "romaji": "genzairyou",
+    "kana_normalized": "げんざいりょう",
+    "romaji_normalized": "genzairyou",
+    "kanji_chars": [
+      "原",
+      "材",
+      "料"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 246,
+    "kanji": "取材",
+    "kana": "しゅざい",
+    "romaji": "shuzai",
+    "kana_normalized": "しゅざい",
+    "romaji_normalized": "shuzai",
+    "kanji_chars": [
+      "取",
+      "材"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 247,
+    "kanji": "素材",
+    "kana": "そざい",
+    "romaji": "sozai",
+    "kana_normalized": "そざい",
+    "romaji_normalized": "sozai",
+    "kanji_chars": [
+      "素",
+      "材"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 248,
+    "kanji": "素人",
+    "kana": "しろうと",
+    "romaji": "shirouto",
+    "kana_normalized": "しろうと",
+    "romaji_normalized": "shirouto",
+    "kanji_chars": [
+      "素",
+      "人"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 249,
+    "kanji": "素直",
+    "kana": "すなお",
+    "romaji": "sunao",
+    "kana_normalized": "すなお",
+    "romaji_normalized": "sunao",
+    "kanji_chars": [
+      "素",
+      "直"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 250,
+    "kanji": "素顔",
+    "kana": "すがお",
+    "romaji": "sugao",
+    "kana_normalized": "すがお",
+    "romaji_normalized": "sugao",
+    "kanji_chars": [
+      "素",
+      "顔"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 251,
+    "kanji": "素足",
+    "kana": "すあし",
+    "romaji": "suashi",
+    "kana_normalized": "すあし",
+    "romaji_normalized": "suashi",
+    "kanji_chars": [
+      "素",
+      "足"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 252,
+    "kanji": "足元",
+    "kana": "あしもと",
+    "romaji": "ashimoto",
+    "kana_normalized": "あしもと",
+    "romaji_normalized": "ashimoto",
+    "kanji_chars": [
+      "足",
+      "元"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 253,
+    "kanji": "不足",
+    "kana": "ふそく",
+    "romaji": "fusoku",
+    "kana_normalized": "ふそく",
+    "romaji_normalized": "fusoku",
+    "kanji_chars": [
+      "不",
+      "足"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 254,
+    "kanji": "不安定",
+    "kana": "ふあんてい",
+    "romaji": "fuantei",
+    "kana_normalized": "ふあんてい",
+    "romaji_normalized": "fuantei",
+    "kanji_chars": [
+      "不",
+      "安",
+      "定"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 255,
+    "kanji": "不自由",
+    "kana": "ふじゆう",
+    "romaji": "fujiyuu",
+    "kana_normalized": "ふじゆう",
+    "romaji_normalized": "fujiyuu",
+    "kanji_chars": [
+      "不",
+      "自",
+      "由"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 256,
+    "kanji": "不思議",
+    "kana": "ふしぎ",
+    "romaji": "fushigi",
+    "kana_normalized": "ふしぎ",
+    "romaji_normalized": "fushigi",
+    "kanji_chars": [
+      "不",
+      "思",
+      "議"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 257,
+    "kanji": "不公平",
+    "kana": "ふこうへい",
+    "romaji": "fukouhei",
+    "kana_normalized": "ふこうへい",
+    "romaji_normalized": "fukouhei",
+    "kanji_chars": [
+      "不",
+      "公",
+      "平"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 258,
+    "kanji": "積極的",
+    "kana": "せっきょくてき",
+    "romaji": "sekkyokuteki",
+    "kana_normalized": "せっきょくてき",
+    "romaji_normalized": "sekkyokuteki",
+    "kanji_chars": [
+      "積",
+      "極",
+      "的"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 259,
+    "kanji": "消極的",
+    "kana": "しょうきょくてき",
+    "romaji": "shoukyokuteki",
+    "kana_normalized": "しょうきょくてき",
+    "romaji_normalized": "shoukyokuteki",
+    "kanji_chars": [
+      "消",
+      "極",
+      "的"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 260,
+    "kanji": "比較的",
+    "kana": "ひかくてき",
+    "romaji": "hikakuteki",
+    "kana_normalized": "ひかくてき",
+    "romaji_normalized": "hikakuteki",
+    "kanji_chars": [
+      "比",
+      "較",
+      "的"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 261,
+    "kanji": "圧倒的",
+    "kana": "あっとうてき",
+    "romaji": "attouteki",
+    "kana_normalized": "あっとうてき",
+    "romaji_normalized": "attouteki",
+    "kanji_chars": [
+      "圧",
+      "倒",
+      "的"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 262,
+    "kanji": "抽象的",
+    "kana": "ちゅうしょうてき",
+    "romaji": "chuushouteki",
+    "kana_normalized": "ちゅうしょうてき",
+    "romaji_normalized": "chuushouteki",
+    "kanji_chars": [
+      "抽",
+      "象",
+      "的"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 263,
+    "kanji": "意図的",
+    "kana": "いとてき",
+    "romaji": "itoteki",
+    "kana_normalized": "いとてき",
+    "romaji_normalized": "itoteki",
+    "kanji_chars": [
+      "意",
+      "図",
+      "的"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 264,
+    "kanji": "意地悪",
+    "kana": "いじわる",
+    "romaji": "ijiwaru",
+    "kana_normalized": "いじわる",
+    "romaji_normalized": "ijiwaru",
+    "kanji_chars": [
+      "意",
+      "地",
+      "悪"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 265,
+    "kanji": "得意",
+    "kana": "とくい",
+    "romaji": "tokui",
+    "kana_normalized": "とくい",
+    "romaji_normalized": "tokui",
+    "kanji_chars": [
+      "得",
+      "意"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 266,
+    "kanji": "悪意",
+    "kana": "あくい",
+    "romaji": "akui",
+    "kana_normalized": "あくい",
+    "romaji_normalized": "akui",
+    "kanji_chars": [
+      "悪",
+      "意"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 267,
+    "kanji": "意外",
+    "kana": "いがい",
+    "romaji": "igai",
+    "kana_normalized": "いがい",
+    "romaji_normalized": "igai",
+    "kanji_chars": [
+      "意",
+      "外"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 268,
+    "kanji": "意欲",
+    "kana": "いよく",
+    "romaji": "iyoku",
+    "kana_normalized": "いよく",
+    "romaji_normalized": "iyoku",
+    "kanji_chars": [
+      "意",
+      "欲"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 269,
+    "kanji": "合意",
+    "kana": "ごうい",
+    "romaji": "goui",
+    "kana_normalized": "ごうい",
+    "romaji_normalized": "goui",
+    "kanji_chars": [
+      "合",
+      "意"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 270,
+    "kanji": "合併",
+    "kana": "がっぺい",
+    "romaji": "gappei",
+    "kana_normalized": "がっぺい",
+    "romaji_normalized": "gappei",
+    "kanji_chars": [
+      "合",
+      "併"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 271,
+    "kanji": "合図",
+    "kana": "あいず",
+    "romaji": "aizu",
+    "kana_normalized": "あいず",
+    "romaji_normalized": "aizu",
+    "kanji_chars": [
+      "合",
+      "図"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 272,
+    "kanji": "都合",
+    "kana": "つごう",
+    "romaji": "tsugou",
+    "kana_normalized": "つごう",
+    "romaji_normalized": "tsugou",
+    "kanji_chars": [
+      "都",
+      "合"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 273,
+    "kanji": "都会",
+    "kana": "とかい",
+    "romaji": "tokai",
+    "kana_normalized": "とかい",
+    "romaji_normalized": "tokai",
+    "kanji_chars": [
+      "都",
+      "会"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 274,
+    "kanji": "機会",
+    "kana": "きかい",
+    "romaji": "kikai",
+    "kana_normalized": "きかい",
+    "romaji_normalized": "kikai",
+    "kanji_chars": [
+      "機",
+      "会"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 275,
+    "kanji": "会見",
+    "kana": "かいけん",
+    "romaji": "kaiken",
+    "kana_normalized": "かいけん",
+    "romaji_normalized": "kaiken",
+    "kanji_chars": [
+      "会",
+      "見"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 276,
+    "kanji": "会談",
+    "kana": "かいだん",
+    "romaji": "kaidan",
+    "kana_normalized": "かいだん",
+    "romaji_normalized": "kaidan",
+    "kanji_chars": [
+      "会",
+      "談"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 277,
+    "kanji": "雑談",
+    "kana": "ざつだん",
+    "romaji": "zatsudan",
+    "kana_normalized": "ざつだん",
+    "romaji_normalized": "zatsudan",
+    "kanji_chars": [
+      "雑",
+      "談"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 278,
+    "kanji": "複雑",
+    "kana": "ふくざつ",
+    "romaji": "fukuzatsu",
+    "kana_normalized": "ふくざつ",
+    "romaji_normalized": "fukuzatsu",
+    "kanji_chars": [
+      "複",
+      "雑"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 279,
+    "kanji": "混雑",
+    "kana": "こんざつ",
+    "romaji": "konzatsu",
+    "kana_normalized": "こんざつ",
+    "romaji_normalized": "konzatsu",
+    "kanji_chars": [
+      "混",
+      "雑"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 280,
+    "kanji": "混乱",
+    "kana": "こんらん",
+    "romaji": "konran",
+    "kana_normalized": "こんらん",
+    "romaji_normalized": "konran",
+    "kanji_chars": [
+      "混",
+      "乱"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 281,
+    "kanji": "乱暴",
+    "kana": "らんぼう",
+    "romaji": "ranbou",
+    "kana_normalized": "らんぼう",
+    "romaji_normalized": "ranbou",
+    "kanji_chars": [
+      "乱",
+      "暴"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 282,
+    "kanji": "防災",
+    "kana": "ぼうさい",
+    "romaji": "bousai",
+    "kana_normalized": "ぼうさい",
+    "romaji_normalized": "bousai",
+    "kanji_chars": [
+      "防",
+      "災"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 283,
+    "kanji": "災害",
+    "kana": "さいがい",
+    "romaji": "saigai",
+    "kana_normalized": "さいがい",
+    "romaji_normalized": "saigai",
+    "kanji_chars": [
+      "災",
+      "害"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 284,
+    "kanji": "被害",
+    "kana": "ひがい",
+    "romaji": "higai",
+    "kana_normalized": "ひがい",
+    "romaji_normalized": "higai",
+    "kanji_chars": [
+      "被",
+      "害"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 285,
+    "kanji": "損害",
+    "kana": "そんがい",
+    "romaji": "songai",
+    "kana_normalized": "そんがい",
+    "romaji_normalized": "songai",
+    "kanji_chars": [
+      "損",
+      "害"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 286,
+    "kanji": "障害",
+    "kana": "しょうがい",
+    "romaji": "shougai",
+    "kana_normalized": "しょうがい",
+    "romaji_normalized": "shougai",
+    "kanji_chars": [
+      "障",
+      "害"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 287,
+    "kanji": "現象",
+    "kana": "げんしょう",
+    "romaji": "genshou",
+    "kana_normalized": "げんしょう",
+    "romaji_normalized": "genshou",
+    "kanji_chars": [
+      "現",
+      "象"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 288,
+    "kanji": "現状",
+    "kana": "げんじょう",
+    "romaji": "genjou",
+    "kana_normalized": "げんじょう",
+    "romaji_normalized": "genjou",
+    "kanji_chars": [
+      "現",
+      "状"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 289,
+    "kanji": "状態",
+    "kana": "じょうたい",
+    "romaji": "joutai",
+    "kana_normalized": "じょうたい",
+    "romaji_normalized": "joutai",
+    "kanji_chars": [
+      "状",
+      "態"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 290,
+    "kanji": "表現",
+    "kana": "ひょうげん",
+    "romaji": "hyougen",
+    "kana_normalized": "ひょうげん",
+    "romaji_normalized": "hyougen",
+    "kanji_chars": [
+      "表",
+      "現"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 291,
+    "kanji": "表面",
+    "kana": "ひょうめん",
+    "romaji": "hyoumen",
+    "kana_normalized": "ひょうめん",
+    "romaji_normalized": "hyoumen",
+    "kanji_chars": [
+      "表",
+      "面"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 292,
+    "kanji": "画面",
+    "kana": "がめん",
+    "romaji": "gamen",
+    "kana_normalized": "がめん",
+    "romaji_normalized": "gamen",
+    "kanji_chars": [
+      "画",
+      "面"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 293,
+    "kanji": "企画",
+    "kana": "きかく",
+    "romaji": "kikaku",
+    "kana_normalized": "きかく",
+    "romaji_normalized": "kikaku",
+    "kanji_chars": [
+      "企",
+      "画"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 294,
+    "kanji": "計画",
+    "kana": "けいかく",
+    "romaji": "keikaku",
+    "kana_normalized": "けいかく",
+    "romaji_normalized": "keikaku",
+    "kanji_chars": [
+      "計",
+      "画"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 295,
+    "kanji": "面倒",
+    "kana": "めんどう",
+    "romaji": "mendou",
+    "kana_normalized": "めんどう",
+    "romaji_normalized": "mendou",
+    "kanji_chars": [
+      "面",
+      "倒"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 296,
+    "kanji": "面接",
+    "kana": "めんせつ",
+    "romaji": "mensetsu",
+    "kana_normalized": "めんせつ",
+    "romaji_normalized": "mensetsu",
+    "kanji_chars": [
+      "面",
+      "接"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 297,
+    "kanji": "密接",
+    "kana": "みっせつ",
+    "romaji": "missetsu",
+    "kana_normalized": "みっせつ",
+    "romaji_normalized": "missetsu",
+    "kanji_chars": [
+      "密",
+      "接"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 298,
+    "kanji": "秘密",
+    "kana": "ひみつ",
+    "romaji": "himitsu",
+    "kana_normalized": "ひみつ",
+    "romaji_normalized": "himitsu",
+    "kanji_chars": [
+      "秘",
+      "密"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 299,
+    "kanji": "必死",
+    "kana": "ひっし",
+    "romaji": "hisshi",
+    "kana_normalized": "ひっし",
+    "romaji_normalized": "hisshi",
+    "kanji_chars": [
+      "必",
+      "死"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 300,
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "romaji": "hitsuyou",
+    "kana_normalized": "ひつよう",
+    "romaji_normalized": "hitsuyou",
+    "kanji_chars": [
+      "必",
+      "要"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 301,
+    "kanji": "要求",
+    "kana": "ようきゅう",
+    "romaji": "youkyuu",
+    "kana_normalized": "ようきゅう",
+    "romaji_normalized": "youkyuu",
+    "kanji_chars": [
+      "要",
+      "求"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 302,
+    "kanji": "欲求",
+    "kana": "よっきゅう",
+    "romaji": "yokkyuu",
+    "kana_normalized": "よっきゅう",
+    "romaji_normalized": "yokkyuu",
+    "kanji_chars": [
+      "欲",
+      "求"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 303,
+    "kanji": "欲張り",
+    "kana": "よくばり",
+    "romaji": "yokubari",
+    "kana_normalized": "よくばり",
+    "romaji_normalized": "yokubari",
+    "kanji_chars": [
+      "欲",
+      "張"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 304,
+    "kanji": "拡張",
+    "kana": "かくちょう",
+    "romaji": "kakuchou",
+    "kana_normalized": "かくちょう",
+    "romaji_normalized": "kakuchou",
+    "kanji_chars": [
+      "拡",
+      "張"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 305,
+    "kanji": "緊張",
+    "kana": "きんちょう",
+    "romaji": "kinchou",
+    "kana_normalized": "きんちょう",
+    "romaji_normalized": "kinchou",
+    "kanji_chars": [
+      "緊",
+      "張"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  },
+  {
+    "id": 306,
+    "kanji": "緊迫",
+    "kana": "きんぱく",
+    "romaji": "kinpaku",
+    "kana_normalized": "きんぱく",
+    "romaji_normalized": "kinpaku",
+    "kanji_chars": [
+      "緊",
+      "迫"
+    ],
+    "has_kanji": true,
+    "jlpt_levels": [
+      2
+    ],
+    "source": 1,
+    "created_at": "2026-04-04T00:00:00Z",
+    "updated_at": "2026-04-04T00:00:00Z"
+  }
+]

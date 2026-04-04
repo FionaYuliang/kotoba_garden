@@ -1,15 +1,18 @@
+import { DEFAULT_CENTER_WORD_POOL } from '@/config/centerWordPool'
 import { wordBank } from '@/data/wordBank'
 import type {
+  DenseCenterWordCandidate,
   GraphLink,
   GraphNode,
   NetworkNeighbor,
   QueryType,
   SearchResponse,
   WordEntry,
+  WordNetworkGroup,
   WordNetworkResponse,
 } from '@/types/word'
 
-const DEFAULT_CENTER_ID = 101
+const DEFAULT_CENTER_ID = DEFAULT_CENTER_WORD_POOL[0] ?? 1
 
 function includesKanji(input: string) {
   return /[\u3400-\u4dbf\u4e00-\u9fff]/.test(input)
@@ -39,12 +42,27 @@ function sharedKanji(a: WordEntry, b: WordEntry) {
   return a.kanji_chars.filter((char) => b.kanji_chars.includes(char))
 }
 
+function groupNeighborsByCenterKanji(center: WordEntry, neighbors: NetworkNeighbor[]): WordNetworkGroup[] {
+  return center.kanji_chars
+    .map((kanjiChar) => ({
+      kanji_char: kanjiChar,
+      neighbors: neighbors.filter((neighbor) => neighbor.shared_kanji.includes(kanjiChar)),
+    }))
+    .filter((group) => group.neighbors.length > 0)
+}
+
 export function getWordById(id: number): WordEntry | undefined {
   return wordBank.find((entry) => entry.id === id)
 }
 
 export function getInitialCenterWord(): WordEntry {
   return getWordById(DEFAULT_CENTER_ID) ?? wordBank[0]
+}
+
+export function getDefaultCenterWordPool(): WordEntry[] {
+  return DEFAULT_CENTER_WORD_POOL
+    .map((id) => getWordById(id))
+    .filter((entry): entry is WordEntry => Boolean(entry))
 }
 
 export function searchWords(query: string): SearchResponse {
@@ -94,6 +112,57 @@ export function getWordNetwork(centerId: number, limit = 8): WordNetworkResponse
     .slice(0, limit)
 
   return { center, neighbors }
+}
+
+export function getWordNetworkGroups(centerId: number, limitPerGroup = 8): WordNetworkGroup[] {
+  const network = getWordNetwork(centerId, wordBank.length)
+
+  return groupNeighborsByCenterKanji(network.center, network.neighbors).map((group) => ({
+    ...group,
+    neighbors: group.neighbors.slice(0, limitPerGroup),
+  }))
+}
+
+export function getDenseCenterWordCandidates(limit = 24): DenseCenterWordCandidate[] {
+  return wordBank
+    .map((word) => {
+      const network = getWordNetwork(word.id, wordBank.length)
+      const groups = groupNeighborsByCenterKanji(network.center, network.neighbors)
+      const neighborCount = network.neighbors.length
+      const groupCount = groups.length
+      const balancedGroupBonus =
+        groupCount > 1 ? Math.min(...groups.map((group) => group.neighbors.length)) : 0
+      const score = neighborCount * 10 + groupCount * 6 + balancedGroupBonus * 4
+
+      return {
+        word,
+        score,
+        neighbor_count: neighborCount,
+        group_count: groupCount,
+        groups,
+      }
+    })
+    .filter((candidate) => candidate.neighbor_count > 0 && candidate.group_count > 0)
+    .sort((a, b) => {
+      return (
+        b.score - a.score ||
+        b.neighbor_count - a.neighbor_count ||
+        b.group_count - a.group_count ||
+        a.word.id - b.word.id
+      )
+    })
+    .slice(0, limit)
+}
+
+export function getRandomDenseCenterWord(poolSize = 12): WordEntry {
+  const pool = getDefaultCenterWordPool().slice(0, poolSize)
+
+  if (pool.length === 0) {
+    return getInitialCenterWord()
+  }
+
+  const index = Math.floor(Math.random() * pool.length)
+  return pool[index]
 }
 
 export function buildGraph(centerId: number, limit = 8): { nodes: GraphNode[]; links: GraphLink[] } {
