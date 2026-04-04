@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { forceCenter, forceCollide, forceLink, forceManyBody, forceSimulation } from 'd3-force'
+import {
+  forceCenter,
+  forceCollide,
+  forceLink,
+  forceManyBody,
+  forceSimulation,
+  forceX,
+  forceY,
+} from 'd3-force'
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 
 import type { GraphLink, GraphNode } from '@/types/word'
@@ -30,10 +38,16 @@ function stopSimulation() {
 function createSimulation() {
   stopSimulation()
 
+  const groups = [...new Set(props.nodes.map((node) => node.primary_group).filter(Boolean))]
+
   localNodes.value = props.nodes.map((node, index) => ({
     ...node,
-    x: node.isCenter ? width / 2 : width / 2 + Math.cos(index) * 120,
-    y: node.isCenter ? height / 2 : height / 2 + Math.sin(index) * 120,
+    x:
+      node.isCenter
+        ? width / 2
+        : width / 2 +
+          (node.primary_group === groups[0] ? -1 : 1) * (130 + (index % 3) * 48),
+    y: node.isCenter ? height / 2 : height / 2 - 140 + (index % 6) * 58,
     fx: node.isCenter ? width / 2 : null,
     fy: node.isCenter ? height / 2 : null,
   }))
@@ -49,7 +63,25 @@ function createSimulation() {
         .strength((link) => 0.3 + link.strength * 0.4),
     )
     .force('charge', forceManyBody().strength(-320))
-    .force('collide', forceCollide<GraphNode>().radius((node) => (node.isCenter ? 98 : 70)))
+    .force('collide', forceCollide<GraphNode>().radius((node) => (node.isCenter ? 98 : 62)))
+    .force(
+      'group-x',
+      forceX<GraphNode>((node) => {
+        if (node.isCenter) {
+          return width / 2
+        }
+
+        if (groups.length < 2) {
+          return width / 2
+        }
+
+        return node.primary_group === groups[0] ? width * 0.28 : width * 0.72
+      }).strength(0.2),
+    )
+    .force(
+      'group-y',
+      forceY<GraphNode>((node) => (node.isCenter ? height / 2 : height / 2)).strength(0.06),
+    )
     .force('center', forceCenter(width / 2, height / 2))
     .alpha(1)
     .alphaDecay(0.06)
@@ -71,6 +103,12 @@ onBeforeUnmount(() => {
 <template>
   <div class="graph-shell">
     <svg class="graph-canvas" :viewBox="`0 0 ${width} ${height}`" role="img" aria-label="词汇关系图谱">
+      <defs>
+        <filter id="node-shadow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="rgba(117, 98, 83, 0.12)" />
+        </filter>
+      </defs>
+
       <line
         v-for="(link, index) in positionedLinks"
         :key="`${index}-${typeof link.source === 'object' ? link.source.id : link.source}`"
@@ -89,11 +127,16 @@ onBeforeUnmount(() => {
         :transform="`translate(${node.x ?? width / 2}, ${node.y ?? height / 2})`"
         @click="emit('select', node.id)"
       >
-        <ellipse :rx="node.isCenter ? 112 : 78" :ry="node.isCenter ? 84 : 34" />
-        <text class="word-main" :class="{ 'is-center': node.isCenter }" text-anchor="middle" dy="-6">
+        <circle :r="node.isCenter ? 86 : 54" filter="url(#node-shadow)" />
+        <text
+          class="word-main"
+          :class="{ 'is-center': node.isCenter }"
+          text-anchor="middle"
+          :dy="node.isCenter ? '-10' : '-6'"
+        >
           {{ node.kanji }}
         </text>
-        <text class="word-sub" text-anchor="middle" dy="26">
+        <text class="word-sub" :class="{ 'is-center': node.isCenter }" text-anchor="middle" :dy="node.isCenter ? '22' : '26'">
           {{ node.kana }}
         </text>
       </g>

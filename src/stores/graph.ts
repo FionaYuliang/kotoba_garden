@@ -4,8 +4,11 @@ import { defineStore } from 'pinia'
 import {
   buildGraph,
   getInitialCenterWord,
+  getPathWords,
+  getRandomDenseCenterWord,
   getWordById,
   getWordNeighbors,
+  getWordNetworkGroups,
   getWordNetwork,
   searchWords,
 } from '@/services/wordService'
@@ -32,7 +35,7 @@ function loadPersistedJourney(): PersistedJourney | null {
 
 export const useGraphStore = defineStore('graph', () => {
   const initial = loadPersistedJourney()
-  const fallbackId = getInitialCenterWord().id
+  const fallbackId = initial?.centerWordId ?? getRandomDenseCenterWord().id
   const centerWordId = ref(initial?.centerWordId ?? fallbackId)
   const keyword = ref('')
   const history = ref<number[]>(
@@ -41,7 +44,9 @@ export const useGraphStore = defineStore('graph', () => {
 
   const graph = computed(() => buildGraph(centerWordId.value))
   const centerWord = computed(() => getWordById(centerWordId.value) ?? getInitialCenterWord())
+  const historyWords = computed(() => getPathWords(history.value))
   const network = computed(() => getWordNetwork(centerWordId.value))
+  const networkGroups = computed(() => getWordNetworkGroups(centerWordId.value, 6))
   const searchState = computed(() => searchWords(keyword.value))
   const hasSearchQuery = computed(() => keyword.value.trim().length > 0)
   const hasNoResults = computed(() => hasSearchQuery.value && searchState.value.results.length === 0)
@@ -94,9 +99,10 @@ export const useGraphStore = defineStore('graph', () => {
   }
 
   function resetJourney() {
-    centerWordId.value = fallbackId
+    const nextCenter = getRandomDenseCenterWord().id
+    centerWordId.value = nextCenter
     keyword.value = ''
-    history.value = [fallbackId]
+    history.value = [nextCenter]
   }
 
   function clearPath() {
@@ -113,7 +119,9 @@ export const useGraphStore = defineStore('graph', () => {
     hasNoResults,
     hasSearchQuery,
     history,
+    historyWords,
     keyword,
+    networkGroups,
     network,
     searchState,
     setKeyword,

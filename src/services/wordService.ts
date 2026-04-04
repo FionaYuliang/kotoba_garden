@@ -166,19 +166,30 @@ export function getRandomDenseCenterWord(poolSize = 12): WordEntry {
 }
 
 export function buildGraph(centerId: number, limit = 8): { nodes: GraphNode[]; links: GraphLink[] } {
-  const network = getWordNetwork(centerId, limit)
+  const groups = getWordNetworkGroups(centerId, Math.max(4, Math.ceil(limit / 2)))
+  const center = getWordById(centerId) ?? getInitialCenterWord()
+  const groupedNeighbors = groups.flatMap((group) =>
+    group.neighbors.map((entry) => ({
+      ...entry,
+      primary_group: group.kanji_char,
+    })),
+  )
+
+  const uniqueNeighbors = groupedNeighbors.filter(
+    (entry, index, list) => list.findIndex((item) => item.id === entry.id) === index,
+  )
 
   const nodes: GraphNode[] = [
-    { ...network.center, isCenter: true },
-    ...network.neighbors.map((entry) => ({
+    { ...center, isCenter: true, primary_group: undefined },
+    ...uniqueNeighbors.map((entry) => ({
       ...entry,
       isCenter: false,
       shared_kanji: entry.shared_kanji,
     })),
   ]
 
-  const links: GraphLink[] = network.neighbors.map((neighbor) => ({
-    source: network.center.id,
+  const links: GraphLink[] = uniqueNeighbors.map((neighbor) => ({
+    source: center.id,
     target: neighbor.id,
     shared_kanji: neighbor.shared_kanji,
     strength: Math.min(1, 0.45 + neighbor.shared_kanji.length * 0.25),

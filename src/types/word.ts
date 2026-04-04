@@ -53,6 +53,7 @@ export interface GraphNode extends WordEntry {
   fy?: number | null
   isCenter?: boolean
   shared_kanji?: string[]
+  primary_group?: string
 }
 
 export interface GraphLink {
