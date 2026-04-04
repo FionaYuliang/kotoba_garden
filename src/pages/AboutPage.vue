@@ -10,29 +10,6 @@ import SiteHeader from '@/components/SiteHeader.vue'
       <section class="hero-panel about-panel">
         <section class="about-section">
           <div class="about-section__heading">
-            <p class="about-section__eyebrow">About The Site</p>
-            <h3>关于网站</h3>
-          </div>
-
-          <div class="about-grid">
-            <article class="about-card">
-              <h3>WHY</h3>
-              <p>
-                汉字词之间天然存在结构联系。我想把这些联系可视化，让词与词之间不再只是单独的个体，而是一张可以点击、延展、漫游的词汇地图，让学习更像探索，而不是枯燥无趣的背诵。
-              </p>
-            </article>
-
-            <article class="about-card">
-              <h3>AFTER</h3>
-              <p>
-                后续会逐步开发２１３６当用汉字图谱、散文专栏等更丰富有趣的内容。
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="about-section">
-          <div class="about-section__heading">
             <p class="about-section__eyebrow">About The Creator</p>
             <h3>关于我</h3>
           </div>
@@ -56,6 +33,30 @@ import SiteHeader from '@/components/SiteHeader.vue'
             </aside> -->
           </div>
         </section>
+        <section class="about-section">
+          <div class="about-section__heading">
+            <p class="about-section__eyebrow">About The Site</p>
+            <h3>关于网站</h3>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>WHY</h3>
+              <p>
+                汉字词之间天然存在结构联系。我想把这些联系可视化，让词与词之间不再只是单独的个体，而是一张可以点击、延展、漫游的词汇地图，让学习更像探索，而不是枯燥无趣的背诵。
+              </p>
+            </article>
+
+            <article class="about-card">
+              <h3>AFTER</h3>
+              <p>
+                后续会逐步开发２１３６当用汉字图谱、散文专栏等更丰富有趣的内容。
+              </p>
+            </article>
+          </div>
+        </section>
+
+
       </section>
     </main>
   </div>

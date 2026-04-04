@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:words": "node scripts/validate-word-bank.mjs",
+    "update:center-pool": "node scripts/update-center-word-pool.mjs",
+    "sync:wordbank": "pnpm validate:words && pnpm update:center-pool"
   },
   "dependencies": {
     "d3-force": "^3.0.0",
