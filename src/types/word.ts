@@ -22,6 +22,12 @@ export interface SearchResponse {
   results: WordEntry[]
 }
 
+export interface WordCardDetail {
+  pronunciation: string
+  meaning: string
+  examples: string[]
+}
+
 export interface NetworkNeighbor extends WordEntry {
   shared_kanji: string[]
 }
