@@ -3,12 +3,12 @@ import { computed, reactive, ref } from 'vue'
 
 import OnyomiGraph from '@/components/OnyomiGraph.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
-import type { OnyomiExample } from '@/config/onyomiMap'
-import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES } from '@/config/onyomiMap'
+import type { OnyomiExample, OnyomiKey } from '@/config/onyomiMap'
+import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES, onyomiOrder } from '@/config/onyomiMap'
 
 const activeMode = ref<(typeof ONYOMI_MODES)[number]>('mode1')
 const activeRhyme = ref<(typeof ONYOMI_RHYMES)[number]>('ang')
-const activeOnyomi = ref(ONYOMI_EXAMPLES[0]?.onyomi ?? 'all')
+const activeOnyomi = ref<OnyomiKey | 'all'>(onyomiOrder[0] ?? 'all')
 const selectedKeys = ref<string[]>([])
 const highlightedLinkKey = ref('')
 const answers = reactive<Record<string, string>>({})
@@ -32,9 +32,12 @@ const filteredExamples = computed(() => {
   return ONYOMI_EXAMPLES.filter((item) => item.onyomi === activeOnyomi.value)
 })
 
-const onyomiFilters = computed(() => {
-  return ['all', ...new Set(ONYOMI_EXAMPLES.map((item) => item.onyomi))]
+const onyomiFilters = computed<(OnyomiKey | 'all')[]>(() => {
+  const available = new Set(ONYOMI_EXAMPLES.map((item) => item.onyomi))
+  return ['all', ...onyomiOrder.filter((item) => available.has(item))]
 })
+
+const firstOnyomiFilter = computed<OnyomiKey | 'all'>(() => onyomiFilters.value.find((item) => item !== 'all') ?? 'all')
 
 const availableRhymes = computed(() => new Set(ONYOMI_EXAMPLES.map((item) => item.rhyme)))
 
@@ -236,7 +239,7 @@ function clearPractice() {
             :class="{ 'is-active': activeMode === mode }" type="button" @click="
               activeMode = mode;
             activeRhyme = 'ang';
-            activeOnyomi = onyomiFilters.find((item) => item !== 'all') ?? 'all';
+            activeOnyomi = firstOnyomiFilter;
             showRhymePanel = false;
             showOnyomiPanel = false;
             highlightedLinkKey = '';
@@ -252,7 +255,6 @@ function clearPractice() {
         </div>
 
         <div class="onyomi-toolbar">
-
           <div v-if="activeMode === 'mode1'" class="onyomi-toolbar__group">
             <div class="onyomi-selector">
               <div class="onyomi-selector__summary">
@@ -281,6 +283,20 @@ function clearPractice() {
             </div>
           </div>
 
+          <div class="onyomi-toolbar__group onyomi-toolbar__group--actions">
+            <label class="onyomi-practice-switch">
+              <span class="onyomi-practice-switch__label">开启练习</span>
+              <button
+                class="graph-switch__track"
+                :class="{ 'is-on': practiceEnabled }"
+                type="button"
+                :aria-pressed="practiceEnabled"
+                @click="practiceEnabled = !practiceEnabled"
+              >
+                <span class="graph-switch__thumb" />
+              </button>
+            </label>
+          </div>
         </div>
 
         <div v-if="activeMode === 'mode1' && showRhymePanel" class="onyomi-rhyme-panel">
@@ -309,21 +325,6 @@ function clearPractice() {
           </button>
         </div>
 
-        <div class="onyomi-top-actions">
-          <label class="onyomi-practice-switch">
-            <span class="onyomi-practice-switch__label">开启练习</span>
-            <button
-              class="graph-switch__track"
-              :class="{ 'is-on': practiceEnabled }"
-              type="button"
-              :aria-pressed="practiceEnabled"
-              @click="practiceEnabled = !practiceEnabled"
-            >
-              <span class="graph-switch__thumb" />
-            </button>
-          </label>
-        </div>
-
         <div class="onyomi-workspace" :class="{ 'is-practice-off': !practiceEnabled }">
           <section class="onyomi-stage">
             <OnyomiGraph :nodes="graphData.nodes" :links="graphData.links" :selected-keys="selectedKeys"
@@ -332,49 +333,53 @@ function clearPractice() {
           </section>
 
           <aside v-if="practiceEnabled" class="onyomi-practice">
-            <div class="onyomi-practice__header">
-              <div>
-                <p class="onyomi-practice__eyebrow">
-                  {{ activeMode === 'mode1' ? '模式一 · 拼音 → 音读' : '模式二 · 音读 → 拼音' }}
-                </p>
-                <h3>练习区</h3>
-              </div>
-
-              <div class="onyomi-practice__actions">
-                <button class="onyomi-clear" type="button" @click="clearPractice">
-                  清空
-                </button>
-              </div>
-            </div>
-
-            <div class="onyomi-practice__pool">
-              <span v-for="key in selectedKeys" :key="key" class="onyomi-practice__reading">
-                {{ key }}
-              </span>
-            </div>
-
-            <div v-if="!selectedExamples.length" class="onyomi-practice__empty">
-              {{ activeMode === 'mode1'
-                ? '点击左侧黄色“音读”节点，把对应规律加入练习区。'
-                : '点击左侧蓝色“拼音组”节点，把对应规律加入练习区。' }}
-            </div>
-
-            <div v-else class="onyomi-practice__list">
-              <article v-for="example in selectedExamples" :key="example.id" class="onyomi-practice__card">
-                <div class="onyomi-practice__prompt">
-                  <h4>{{ example.kanji }}</h4>
-                  <p class="onyomi-practice__words">{{ example.japaneseWords.join(' / ') }}</p>
+            <div class="onyomi-practice__top">
+              <div class="onyomi-practice__header">
+                <div>
+                  <p class="onyomi-practice__eyebrow">
+                    {{ activeMode === 'mode1' ? '模式一 · 拼音 → 音读' : '模式二 · 音读 → 拼音' }}
+                  </p>
+                  <h3>练习区</h3>
                 </div>
 
-                <div class="onyomi-practice__choices">
-                  <button v-for="choice in getPracticeChoices(example)" :key="`${example.id}-${choice}`" class="onyomi-choice" :class="{
-                    'is-correct': answers[example.id] === choice && choice === (activeMode === 'mode1' ? example.onyomi : example.pinyin),
-                    'is-wrong': answers[example.id] === choice && choice !== (activeMode === 'mode1' ? example.onyomi : example.pinyin),
-                  }" type="button" @click="chooseAnswer(example.id, choice)">
-                    {{ choice }}
+                <div class="onyomi-practice__actions">
+                  <button class="onyomi-clear" type="button" @click="clearPractice">
+                    清空
                   </button>
                 </div>
-              </article>
+              </div>
+
+              <div class="onyomi-practice__pool">
+                <span v-for="key in selectedKeys" :key="key" class="onyomi-practice__reading">
+                  {{ key }}
+                </span>
+              </div>
+            </div>
+
+            <div class="onyomi-practice__body">
+              <div v-if="!selectedExamples.length" class="onyomi-practice__empty">
+                {{ activeMode === 'mode1'
+                  ? '点击左侧黄色“音读”节点，把对应规律加入练习区。'
+                  : '点击左侧蓝色“拼音组”节点，把对应规律加入练习区。' }}
+              </div>
+
+              <div v-else class="onyomi-practice__list">
+                <article v-for="example in selectedExamples" :key="example.id" class="onyomi-practice__card">
+                  <div class="onyomi-practice__prompt">
+                    <h4>{{ example.kanji }}</h4>
+                    <p class="onyomi-practice__words">{{ example.japaneseWords.join(' / ') }}</p>
+                  </div>
+
+                  <div class="onyomi-practice__choices">
+                    <button v-for="choice in getPracticeChoices(example)" :key="`${example.id}-${choice}`" class="onyomi-choice" :class="{
+                      'is-correct': answers[example.id] === choice && choice === (activeMode === 'mode1' ? example.onyomi : example.pinyin),
+                      'is-wrong': answers[example.id] === choice && choice !== (activeMode === 'mode1' ? example.onyomi : example.pinyin),
+                    }" type="button" @click="chooseAnswer(example.id, choice)">
+                      {{ choice }}
+                    </button>
+                  </div>
+                </article>
+              </div>
             </div>
           </aside>
         </div>

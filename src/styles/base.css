@@ -276,12 +276,6 @@ button {
   margin-top: 20px;
 }
 
-.onyomi-top-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 14px;
-}
-
 .onyomi-practice-switch {
   display: inline-flex;
   align-items: center;
@@ -303,6 +297,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.onyomi-toolbar__group--actions {
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .onyomi-selector {
@@ -526,7 +525,9 @@ button {
 }
 
 .onyomi-practice {
-  padding: 24px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 26px 20px;
   border-radius: 32px;
   background: rgba(255, 252, 247, 0.86);
   border: 1px solid rgba(117, 98, 83, 0.1);
@@ -534,7 +535,13 @@ button {
   position: sticky;
   top: 96px;
   max-height: calc(100vh - 116px);
-  overflow-y: auto;
+  overflow: hidden;
+}
+
+.onyomi-practice__top {
+  flex: 0 0 auto;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(117, 98, 83, 0.08);
 }
 
 .onyomi-practice__header {
@@ -583,17 +590,23 @@ button {
 }
 
 .onyomi-practice__empty {
-  margin-top: 22px;
   padding: 24px 22px;
   border-radius: 24px;
   background: rgba(250, 246, 239, 0.88);
   color: #847468;
 }
 
+.onyomi-practice__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-top: 16px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 .onyomi-practice__list {
   display: grid;
   gap: 16px;
-  margin-top: 22px;
 }
 
 .onyomi-practice__card {
@@ -2110,7 +2123,8 @@ button {
     align-items: stretch;
   }
 
-  .onyomi-top-actions {
+  .onyomi-toolbar__group--actions {
+    margin-left: 0;
     justify-content: flex-start;
   }
 
@@ -2148,6 +2162,17 @@ button {
     position: static;
     max-height: none;
     overflow: visible;
+  }
+
+  .onyomi-practice__top {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .onyomi-practice__body {
+    margin-top: 14px;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .onyomi-practice__header {

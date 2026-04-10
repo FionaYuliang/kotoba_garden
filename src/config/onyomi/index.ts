@@ -1,4 +1,5 @@
 import { rhymeOrder } from './rhymeOrder'
+import { onyomiOrder, onyomiOrderWithCounts } from './onyomiOrder'
 import type { OnyomiExample, OnyomiRhymeDataset } from './types'
 import { aDataset } from './rhymes/a'
 import { aiDataset } from './rhymes/ai'
@@ -37,7 +38,9 @@ import { yuanDataset } from './rhymes/üan'
 import { yueDataset } from './rhymes/üe'
 import { yunDataset } from './rhymes/ün'
 
+export type { OnyomiKey } from './onyomiOrder'
 export type { OnyomiExample, OnyomiRhymeDataset } from './types'
+export { onyomiOrder, onyomiOrderWithCounts } from './onyomiOrder'
 export { rhymeOrder } from './rhymeOrder'
 
 const rhymeDatasets: OnyomiRhymeDataset[] = [

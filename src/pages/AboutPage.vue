@@ -56,7 +56,7 @@ const wechatContact = '请替换为你的微信号'
             <article class="about-card">
               <h3>AFTER</h3>
               <p>
-                后续会逐步开发２１３６当用汉字图谱、散文专栏等更丰富有趣的内容。
+                后续会逐步开发更多丰富有趣的内容，敬请关注。
               </p>
             </article>
           </div>

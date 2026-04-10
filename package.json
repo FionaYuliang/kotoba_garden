@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "validate:words": "node scripts/validate-word-bank.mjs",
     "update:center-pool": "node scripts/update-center-word-pool.mjs",
+    "update:onyomi-order": "node scripts/update-onyomi-order.mjs",
+    "sync:onyomi": "pnpm update:onyomi-order && pnpm build",
     "sync:wordbank": "pnpm validate:words && pnpm update:center-pool"
   },
   "dependencies": {
