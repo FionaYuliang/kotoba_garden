@@ -12,7 +12,11 @@
     "sync:wordbank": "pnpm validate:words && pnpm update:center-pool"
   },
   "dependencies": {
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-zoom": "^3.0.8",
     "d3-force": "^3.0.0",
+    "d3-selection": "^3.0.0",
+    "d3-zoom": "^3.0.0",
     "pinia": "^2.1.7",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"

@@ -411,6 +411,7 @@ button {
   display: block;
   cursor: grab;
   user-select: none;
+  touch-action: none;
 }
 
 .onyomi-graph__canvas:active {

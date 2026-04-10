@@ -12,7 +12,7 @@ const selectedKeys = ref<string[]>([])
 const answers = reactive<Record<string, string>>({})
 const showRhymePanel = ref(false)
 const showOnyomiPanel = ref(false)
-const practiceEnabled = ref(true)
+const practiceEnabled = ref(false)
 
 const filteredExamples = computed(() => {
   if (activeMode.value === 'mode1') {

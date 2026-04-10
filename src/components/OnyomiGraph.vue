@@ -8,7 +8,9 @@ import {
   forceX,
   forceY,
 } from 'd3-force'
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { select } from 'd3-selection'
+import { zoom, zoomIdentity, type ZoomBehavior, type ZoomTransform } from 'd3-zoom'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 type OnyomiGraphNode = {
   id: string
@@ -41,20 +43,18 @@ const emit = defineEmits<{
 
 const width = 1320
 const height = 680
+const minScale = 0.55
+const maxScale = 3.2
 const localNodes = ref<OnyomiGraphNode[]>([])
 const localLinks = ref<OnyomiGraphLink[]>([])
-const scale = ref(1)
-const offsetX = ref(0)
-const offsetY = ref(0)
-const isDragging = ref(false)
-const dragOrigin = ref({ x: 0, y: 0, startX: 0, startY: 0 })
+const svgRef = ref<SVGSVGElement | null>(null)
+const viewportTransformState = ref<ZoomTransform>(zoomIdentity)
 let simulation: ReturnType<typeof forceSimulation<OnyomiGraphNode>> | null = null
+let zoomBehavior: ZoomBehavior<SVGSVGElement, unknown> | null = null
 
 const positionedNodes = computed(() => localNodes.value)
 const positionedLinks = computed(() => localLinks.value)
-const viewportTransform = computed(
-  () => `translate(${offsetX.value} ${offsetY.value}) scale(${scale.value})`,
-)
+const viewportTransform = computed(() => viewportTransformState.value.toString())
 
 function stopSimulation() {
   simulation?.stop()
@@ -124,51 +124,66 @@ watch(
 
 onBeforeUnmount(() => {
   stopSimulation()
+  if (svgRef.value) {
+    select(svgRef.value).on('.zoom', null)
+  }
 })
 
-function handleWheel(event: WheelEvent) {
-  event.preventDefault()
-  const next = Math.min(2.1, Math.max(0.6, scale.value + (event.deltaY > 0 ? -0.08 : 0.08)))
-  scale.value = Number(next.toFixed(2))
-}
-
-function startDrag(event: MouseEvent) {
-  isDragging.value = true
-  dragOrigin.value = {
-    x: event.clientX,
-    y: event.clientY,
-    startX: offsetX.value,
-    startY: offsetY.value,
-  }
-}
-
-function moveDrag(event: MouseEvent) {
-  if (!isDragging.value) {
+function setupZoom() {
+  if (!svgRef.value) {
     return
   }
 
-  offsetX.value = dragOrigin.value.startX + (event.clientX - dragOrigin.value.x)
-  offsetY.value = dragOrigin.value.startY + (event.clientY - dragOrigin.value.y)
+  zoomBehavior = zoom<SVGSVGElement, unknown>()
+    .scaleExtent([minScale, maxScale])
+    .filter((event) => {
+      if (event.type === 'dblclick') {
+        return false
+      }
+
+      if (event.type === 'mousedown') {
+        return event.button === 0
+      }
+
+      return true
+    })
+    .on('zoom', (event) => {
+      viewportTransformState.value = event.transform
+    })
+
+  const svgSelection = select(svgRef.value)
+  svgSelection.call(zoomBehavior)
+  svgSelection.on('dblclick.zoom', null)
 }
 
-function endDrag() {
-  isDragging.value = false
+function zoomBy(factor: number) {
+  if (!svgRef.value || !zoomBehavior) {
+    return
+  }
+
+  select(svgRef.value).call(zoomBehavior.scaleBy, factor)
 }
 
 function resetViewport() {
-  scale.value = 1
-  offsetX.value = 0
-  offsetY.value = 0
+  if (!svgRef.value || !zoomBehavior) {
+    return
+  }
+
+  select(svgRef.value).call(zoomBehavior.transform, zoomIdentity)
 }
+
+onMounted(() => {
+  setupZoom()
+})
 </script>
 
 <template>
   <div class="onyomi-graph">
     <div class="onyomi-graph__hud">
-      <button class="onyomi-graph__hud-button" type="button" @click="scale = Math.min(2.1, Number((scale + 0.1).toFixed(2)))">
+      <button class="onyomi-graph__hud-button" type="button" @click="zoomBy(1.18)">
         放大
       </button>
-      <button class="onyomi-graph__hud-button" type="button" @click="scale = Math.max(0.6, Number((scale - 0.1).toFixed(2)))">
+      <button class="onyomi-graph__hud-button" type="button" @click="zoomBy(1 / 1.18)">
         缩小
       </button>
       <button class="onyomi-graph__hud-button" type="button" @click="resetViewport">
@@ -177,15 +192,11 @@ function resetViewport() {
     </div>
 
     <svg
+      ref="svgRef"
       class="onyomi-graph__canvas"
       :viewBox="`0 0 ${width} ${height}`"
       role="img"
       aria-label="音读关系图谱"
-      @wheel="handleWheel"
-      @mousedown="startDrag"
-      @mousemove="moveDrag"
-      @mouseup="endDrag"
-      @mouseleave="endDrag"
     >
       <g :transform="viewportTransform">
         <line
