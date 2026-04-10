@@ -456,15 +456,23 @@ button {
   filter: drop-shadow(0 8px 18px rgba(117, 98, 83, 0.12));
 }
 
+.onyomi-graph__node rect {
+  stroke: rgba(117, 98, 83, 0.12);
+  stroke-width: 1.2;
+  filter: drop-shadow(0 8px 18px rgba(117, 98, 83, 0.12));
+}
+
 .onyomi-graph__node.is-rhyme circle {
   fill: rgba(241, 203, 154, 0.88);
 }
 
-.onyomi-graph__node.is-pinyin circle {
+.onyomi-graph__node.is-pinyin circle,
+.onyomi-graph__node.is-pinyin rect {
   fill: rgba(178, 204, 234, 0.88);
 }
 
-.onyomi-graph__node.is-kanji circle {
+.onyomi-graph__node.is-kanji circle,
+.onyomi-graph__node.is-kanji rect {
   fill: rgba(197, 220, 183, 0.9);
 }
 
@@ -472,7 +480,8 @@ button {
   fill: rgba(244, 229, 144, 0.92);
 }
 
-.onyomi-graph__node.is-selected circle {
+.onyomi-graph__node.is-selected circle,
+.onyomi-graph__node.is-selected rect {
   stroke: rgba(95, 79, 67, 0.5);
   stroke-width: 2;
 }

@@ -6,7 +6,7 @@ import SiteHeader from '@/components/SiteHeader.vue'
 import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES } from '@/config/onyomiMap'
 
 const activeMode = ref<(typeof ONYOMI_MODES)[number]>('mode1')
-const activeRhyme = ref<(typeof ONYOMI_RHYMES)[number]>('all')
+const activeRhyme = ref<(typeof ONYOMI_RHYMES)[number]>('ang')
 const activeOnyomi = ref('all')
 const selectedKeys = ref<string[]>([])
 const answers = reactive<Record<string, string>>({})
@@ -39,59 +39,109 @@ const availableRhymes = computed(() => new Set(ONYOMI_EXAMPLES.map((item) => ite
 const currentRhymeLabel = computed(() => (activeRhyme.value === 'all' ? '全部韵母' : activeRhyme.value))
 const currentOnyomiLabel = computed(() => (activeOnyomi.value === 'all' ? '全部音读' : activeOnyomi.value))
 
+const groupedByOnyomi = computed(() => {
+  const groups = new Map<
+    string,
+    {
+      onyomi: string
+      rhymes: Set<string>
+      pinyins: Set<string>
+      kanjis: Set<string>
+      exampleCount: number
+    }
+  >()
+
+  for (const item of filteredExamples.value) {
+    const existing = groups.get(item.onyomi)
+
+    if (existing) {
+      existing.rhymes.add(item.rhyme)
+      existing.pinyins.add(item.pinyin)
+      existing.kanjis.add(item.kanji)
+      existing.exampleCount += 1
+      continue
+    }
+
+    groups.set(item.onyomi, {
+      onyomi: item.onyomi,
+      rhymes: new Set([item.rhyme]),
+      pinyins: new Set([item.pinyin]),
+      kanjis: new Set([item.kanji]),
+      exampleCount: 1,
+    })
+  }
+
+  return [...groups.values()]
+})
+
 const graphData = computed(() => {
   const nodesMap = new Map<string, { id: string; label: string; type: 'rhyme' | 'pinyin' | 'kanji' | 'onyomi'; selectKey?: string; itemCount?: number }>()
   const links: { source: string; target: string }[] = []
+  const linkKeys = new Set<string>()
+
+  function pushLink(source: string, target: string) {
+    const key = `${source}->${target}`
+    if (linkKeys.has(key)) {
+      return
+    }
+
+    linkKeys.add(key)
+    links.push({ source, target })
+  }
 
   if (activeMode.value === 'mode1') {
-    for (const item of filteredExamples.value) {
-      const rhymeId = `rhyme:${item.rhyme}`
-      const pinyinId = `pinyin:${item.rhyme}:${item.pinyin}`
-      const kanjiId = `kanji:${item.id}`
-      const onyomiId = `onyomi:${item.onyomi}`
+    for (const group of groupedByOnyomi.value) {
+      const onyomiId = `onyomi:${group.onyomi}`
+      const pinyinId = `pinyin-group:${group.onyomi}`
+      const kanjiId = `kanji-group:${group.onyomi}`
 
-      nodesMap.set(rhymeId, { id: rhymeId, label: item.rhyme, type: 'rhyme' })
-      nodesMap.set(pinyinId, { id: pinyinId, label: item.pinyin, type: 'pinyin' })
-      nodesMap.set(kanjiId, { id: kanjiId, label: item.kanji, type: 'kanji' })
-      nodesMap.set(onyomiId, {
-        id: onyomiId,
-        label: item.onyomi,
-        type: 'onyomi',
-        selectKey: item.onyomi,
-        itemCount: filteredExamples.value.filter((entry) => entry.onyomi === item.onyomi).length,
-      })
-
-      links.push(
-        { source: rhymeId, target: pinyinId },
-        { source: pinyinId, target: kanjiId },
-        { source: kanjiId, target: onyomiId },
-      )
-    }
-  } else {
-    for (const item of filteredExamples.value) {
-      const onyomiId = `onyomi:${item.onyomi}`
-      const kanjiId = `kanji:${item.id}`
-      const pinyinId = `pinyin:${item.rhyme}:${item.pinyin}`
-
-      nodesMap.set(onyomiId, {
-        id: onyomiId,
-        label: item.onyomi,
-        type: 'onyomi',
-        itemCount: filteredExamples.value.filter((entry) => entry.onyomi === item.onyomi).length,
-      })
-      nodesMap.set(kanjiId, { id: kanjiId, label: item.kanji, type: 'kanji' })
       nodesMap.set(pinyinId, {
         id: pinyinId,
-        label: item.pinyin,
+        label: [...group.pinyins].sort().join(' / '),
         type: 'pinyin',
-        selectKey: item.pinyin,
-        itemCount: filteredExamples.value.filter((entry) => entry.pinyin === item.pinyin).length,
+      })
+      nodesMap.set(kanjiId, {
+        id: kanjiId,
+        label: [...group.kanjis].sort().join(' / '),
+        type: 'kanji',
+      })
+      nodesMap.set(onyomiId, {
+        id: onyomiId,
+        label: group.onyomi,
+        type: 'onyomi',
+        selectKey: group.onyomi,
+        itemCount: group.exampleCount,
       })
 
-      links.push(
-        { source: onyomiId, target: kanjiId },
-        { source: kanjiId, target: pinyinId },
-      )
+      pushLink(pinyinId, kanjiId)
+      pushLink(kanjiId, onyomiId)
+    }
+  } else {
+    for (const group of groupedByOnyomi.value) {
+      const onyomiId = `onyomi:${group.onyomi}`
+      const kanjiId = `kanji-group:${group.onyomi}`
+      const pinyinId = `pinyin-group:${group.onyomi}`
+
+      nodesMap.set(onyomiId, {
+        id: onyomiId,
+        label: group.onyomi,
+        type: 'onyomi',
+      })
+      nodesMap.set(kanjiId, {
+        id: kanjiId,
+        label: [...group.kanjis].sort().join(' / '),
+        type: 'kanji',
+      })
+      nodesMap.set(pinyinId, {
+        id: pinyinId,
+        label: [...group.pinyins].sort().join(' / '),
+        type: 'pinyin',
+        selectKey: group.onyomi,
+        itemCount: group.pinyins.size,
+      })
+
+      pushLink(onyomiId, kanjiId)
+      pushLink(kanjiId, pinyinId)
     }
   }
 
@@ -102,11 +152,7 @@ const graphData = computed(() => {
 })
 
 const selectedExamples = computed(() => {
-  if (activeMode.value === 'mode1') {
-    return filteredExamples.value.filter((item) => selectedKeys.value.includes(item.onyomi))
-  }
-
-  return filteredExamples.value.filter((item) => selectedKeys.value.includes(item.pinyin))
+  return filteredExamples.value.filter((item) => selectedKeys.value.includes(item.onyomi))
 })
 
 const practiceChoices = computed(() => {
@@ -120,9 +166,7 @@ const practiceChoices = computed(() => {
 function toggleSelection(key: string) {
   if (selectedKeys.value.includes(key)) {
     selectedKeys.value = selectedKeys.value.filter((item) => item !== key)
-    const matched = activeMode.value === 'mode1'
-      ? selectedExamples.value.filter((item) => item.onyomi === key)
-      : selectedExamples.value.filter((item) => item.pinyin === key)
+    const matched = selectedExamples.value.filter((item) => item.onyomi === key)
 
     for (const example of matched) {
       delete answers[example.id]
@@ -165,7 +209,7 @@ function clearPractice() {
           <button v-for="mode in ONYOMI_MODES" :key="mode" class="onyomi-mode-switch__option"
             :class="{ 'is-active': activeMode === mode }" type="button" @click="
               activeMode = mode;
-            activeRhyme = 'all';
+            activeRhyme = 'ang';
             activeOnyomi = 'all';
             showRhymePanel = false;
             showOnyomiPanel = false;
@@ -285,7 +329,7 @@ function clearPractice() {
             <div v-if="!selectedExamples.length" class="onyomi-practice__empty">
               {{ activeMode === 'mode1'
                 ? '点击左侧黄色“音读”节点，把对应规律加入练习区。'
-                : '点击左侧蓝色“拼音”节点，把对应规律加入练习区。' }}
+                : '点击左侧蓝色“拼音组”节点，把对应规律加入练习区。' }}
             </div>
 
             <div v-else class="onyomi-practice__list">

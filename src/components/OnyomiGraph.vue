@@ -1,13 +1,4 @@
 <script setup lang="ts">
-import {
-  forceCenter,
-  forceCollide,
-  forceLink,
-  forceManyBody,
-  forceSimulation,
-  forceX,
-  forceY,
-} from 'd3-force'
 import { select } from 'd3-selection'
 import { zoom, zoomIdentity, type ZoomBehavior, type ZoomTransform } from 'd3-zoom'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
@@ -49,28 +40,84 @@ const localNodes = ref<OnyomiGraphNode[]>([])
 const localLinks = ref<OnyomiGraphLink[]>([])
 const svgRef = ref<SVGSVGElement | null>(null)
 const viewportTransformState = ref<ZoomTransform>(zoomIdentity)
-let simulation: ReturnType<typeof forceSimulation<OnyomiGraphNode>> | null = null
 let zoomBehavior: ZoomBehavior<SVGSVGElement, unknown> | null = null
 
 const positionedNodes = computed(() => localNodes.value)
 const positionedLinks = computed(() => localLinks.value)
 const viewportTransform = computed(() => viewportTransformState.value.toString())
 
-function stopSimulation() {
-  simulation?.stop()
-  simulation = null
+function getNodeLabelLines(node: OnyomiGraphNode) {
+  const segments = node.label.split(' / ')
+  if (segments.length <= 1) {
+    return [node.label]
+  }
+
+  const chunkSize = node.type === 'kanji' ? 6 : 3
+  const lines: string[] = []
+
+  for (let index = 0; index < segments.length; index += chunkSize) {
+    lines.push(segments.slice(index, index + chunkSize).join(' / '))
+  }
+
+  return lines
 }
 
-function createSimulation() {
-  stopSimulation()
+function getNodeBlockSize(node: OnyomiGraphNode) {
+  const lines = getNodeLabelLines(node)
+  const longestLineLength = Math.max(...lines.map((line) => line.length))
 
+  if (node.type === 'pinyin') {
+    return {
+      width: Math.min(280, Math.max(120, longestLineLength * 8 + 42)),
+      height: 42 + Math.max(0, lines.length - 1) * 16,
+    }
+  }
+
+  if (node.type === 'kanji') {
+    return {
+      width: Math.min(280, Math.max(110, longestLineLength * 11 + 38)),
+      height: 42 + Math.max(0, lines.length - 1) * 16,
+    }
+  }
+
+  return { width: 0, height: 0 }
+}
+
+function getNodeRadius(node: OnyomiGraphNode) {
+  if (node.type === 'rhyme') return 30
+  if (node.type === 'onyomi') return 28
+  return 24
+}
+
+function getLabelLineOffset(index: number, total: number) {
+  const baseline = (total - 1) * 9
+  return index * 18 - baseline
+}
+
+function getGroupKey(nodeId: string) {
+  if (nodeId.startsWith('onyomi:')) {
+    return nodeId.slice('onyomi:'.length)
+  }
+
+  if (nodeId.startsWith('kanji-group:')) {
+    return nodeId.slice('kanji-group:'.length)
+  }
+
+  if (nodeId.startsWith('pinyin-group:')) {
+    return nodeId.slice('pinyin-group:'.length)
+  }
+
+  return nodeId
+}
+
+function createLayout() {
   const columnX =
     props.mode === 'mode1'
       ? {
-          rhyme: width * 0.14,
-          pinyin: width * 0.34,
-          kanji: width * 0.58,
-          onyomi: width * 0.82,
+          rhyme: width * 0.12,
+          pinyin: width * 0.24,
+          kanji: width * 0.52,
+          onyomi: width * 0.8,
         }
       : {
           rhyme: width * 0.12,
@@ -79,51 +126,62 @@ function createSimulation() {
           pinyin: width * 0.82,
         }
 
-  localNodes.value = props.nodes.map((node, index) => ({
-    ...node,
-    x: columnX[node.type] + ((index % 2) - 0.5) * 42,
-    y: 110 + ((index * 58) % (height - 210)),
-  }))
+  const sortedNodes = [...props.nodes].sort((a, b) => {
+    const keyA = getGroupKey(a.id)
+    const keyB = getGroupKey(b.id)
+    return keyA.localeCompare(keyB)
+  })
 
-  localLinks.value = props.links.map((link) => ({ ...link }))
+  const uniqueGroups = [...new Set(sortedNodes.map((node) => getGroupKey(node.id)))]
+  const topPadding = 78
+  const bottomPadding = 78
+  const availableHeight = Math.max(120, height - topPadding - bottomPadding)
+  const groupSpacing = uniqueGroups.length > 1 ? availableHeight / (uniqueGroups.length - 1) : 0
+  const groupY = new Map<string, number>()
 
-  simulation = forceSimulation(localNodes.value)
-    .force(
-      'link',
-      forceLink<OnyomiGraphNode, OnyomiGraphLink>(localLinks.value)
-        .id((node) => node.id)
-        .distance((link) => {
-          const sourceType = typeof link.source === 'object' ? link.source.type : 'pinyin'
-          return sourceType === 'kanji' ? 140 : 126
-        })
-        .strength(0.8),
-    )
-    .force('charge', forceManyBody().strength(-320))
-    .force(
-      'collide',
-      forceCollide<OnyomiGraphNode>().radius((node) => {
-        if (node.type === 'rhyme') return 48
-        if (node.type === 'onyomi') return 44
-        return 38
-      }),
-    )
-    .force('center', forceCenter(width / 2, height / 2))
-    .force('x', forceX<OnyomiGraphNode>((node) => columnX[node.type]).strength(0.55))
-    .force('y', forceY<OnyomiGraphNode>(height / 2).strength(0.08))
-    .alpha(1)
-    .alphaDecay(0.08)
+  uniqueGroups.forEach((group, index) => {
+    groupY.set(group, topPadding + index * groupSpacing)
+  })
+
+  const nodes = sortedNodes.map((node) => {
+    const y = groupY.get(getGroupKey(node.id)) ?? height / 2
+    return {
+      ...node,
+      x: columnX[node.type],
+      y,
+    }
+  })
+
+  const nodeById = new Map(nodes.map((node) => [node.id, node]))
+  const links: OnyomiGraphLink[] = []
+  for (const link of props.links) {
+    const sourceId = typeof link.source === 'object' ? link.source.id : link.source
+    const targetId = typeof link.target === 'object' ? link.target.id : link.target
+    const sourceNode = nodeById.get(sourceId)
+    const targetNode = nodeById.get(targetId)
+    if (!sourceNode || !targetNode) {
+      continue
+    }
+
+    links.push({
+      source: sourceNode,
+      target: targetNode,
+    })
+  }
+
+  localNodes.value = nodes
+  localLinks.value = links
 }
 
 watch(
   () => [props.nodes, props.links, props.mode],
   () => {
-    createSimulation()
+    createLayout()
   },
   { deep: true, immediate: true },
 )
 
 onBeforeUnmount(() => {
-  stopSimulation()
   if (svgRef.value) {
     select(svgRef.value).on('.zoom', null)
   }
@@ -223,15 +281,35 @@ onMounted(() => {
           :transform="`translate(${node.x ?? 0}, ${node.y ?? 0})`"
           @click="node.type === props.clickableType && node.selectKey ? emit('selectKey', node.selectKey) : undefined"
         >
-          <circle :r="node.type === 'rhyme' ? 30 : node.type === 'onyomi' ? 28 : 24" />
-          <text class="onyomi-graph__label" text-anchor="middle" dy="4">
-            {{ node.label }}
+          <template v-if="node.type === 'pinyin' || node.type === 'kanji'">
+            <rect
+              :x="-(getNodeBlockSize(node).width / 2)"
+              :y="-(getNodeBlockSize(node).height / 2)"
+              :width="getNodeBlockSize(node).width"
+              :height="getNodeBlockSize(node).height"
+              rx="18"
+              ry="18"
+            />
+          </template>
+          <template v-else>
+            <circle :r="getNodeRadius(node)" />
+          </template>
+
+          <text class="onyomi-graph__label" text-anchor="middle">
+            <tspan
+              v-for="(line, lineIndex) in getNodeLabelLines(node)"
+              :key="`${node.id}-${lineIndex}`"
+              x="0"
+              :dy="lineIndex === 0 ? getLabelLineOffset(lineIndex, getNodeLabelLines(node).length) : 18"
+            >
+              {{ line }}
+            </tspan>
           </text>
           <text
             v-if="node.type === props.clickableType && node.itemCount"
             class="onyomi-graph__count"
             text-anchor="middle"
-            dy="42"
+            :dy="node.type === 'pinyin' ? getNodeBlockSize(node).height / 2 + 20 : 42"
           >
             {{ node.itemCount }}组
           </text>

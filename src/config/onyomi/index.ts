@@ -81,6 +81,11 @@ const rhymeDatasets: OnyomiRhymeDataset[] = [
 
 export const ONYOMI_RHYME_DATASETS = rhymeDatasets
 export const ONYOMI_ALL_RHYMES = rhymeOrder
-export const ONYOMI_EXAMPLES: OnyomiExample[] = rhymeDatasets.flatMap((dataset) => dataset.examples)
+export const ONYOMI_EXAMPLES: OnyomiExample[] = rhymeDatasets.flatMap((dataset) =>
+  dataset.examples.map((example) => ({
+    ...example,
+    japaneseWords: example.japaneseWords.map((word) => word.replace(/[~〜]/g, '')),
+  })),
+)
 export const ONYOMI_RHYMES = ['all', ...rhymeDatasets.filter((dataset) => dataset.examples.length > 0).map((dataset) => dataset.key)] as const
 export const ONYOMI_MODES = ['mode1', 'mode2'] as const
