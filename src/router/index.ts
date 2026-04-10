@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import('@/pages/HomePage.vue'),
     },
     {
+      path: '/onyomi-map',
+      name: 'onyomi-map',
+      component: () => import('@/pages/OnyomiMapPage.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('@/pages/AboutPage.vue'),

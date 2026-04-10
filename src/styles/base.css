@@ -120,12 +120,6 @@ button {
   transition: color 180ms ease, opacity 180ms ease;
 }
 
-.topnav-link--button {
-  border: 0;
-  background: transparent;
-  padding: 0;
-}
-
 .topnav-link:hover {
   color: #5f4f43;
 }
@@ -133,36 +127,6 @@ button {
 .topnav-link.is-active {
   color: #4f4036;
   font-weight: 600;
-}
-
-.site-toast {
-  position: fixed;
-  top: 86px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 40;
-  min-width: 200px;
-  padding: 12px 18px;
-  border-radius: 999px;
-  background: rgba(83, 68, 58, 0.92);
-  color: #fff8f1;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  text-align: center;
-  box-shadow: 0 16px 30px rgba(83, 68, 58, 0.18);
-}
-
-.site-toast-enter-active,
-.site-toast-leave-active {
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-
-.site-toast-enter-from,
-.site-toast-leave-to {
-  opacity: 0;
-  transform: translateX(-50%) translateY(-8px);
 }
 
 .home-main {
@@ -184,6 +148,470 @@ button {
   margin: 0 auto;
   border-radius: 0;
   padding: 14px 24px 30px;
+}
+
+.onyomi-panel {
+  max-width: 1360px;
+  padding-top: 24px;
+}
+
+.onyomi-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) auto;
+  gap: 18px;
+  align-items: end;
+}
+
+.onyomi-hero__copy h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #4f4036;
+}
+
+.onyomi-hero__lead {
+  max-width: 760px;
+  margin: 14px 0 0;
+  color: #7b6b5f;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.onyomi-hero__lead code {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(246, 238, 229, 0.9);
+  color: #6c5b4f;
+}
+
+.onyomi-hero__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.onyomi-mode-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 620px);
+  margin: 26px auto 0;
+  padding: 8px;
+  border-radius: 999px;
+  background: rgba(248, 242, 234, 0.9);
+  border: 1px solid rgba(117, 98, 83, 0.1);
+  box-shadow:
+    0 12px 24px rgba(114, 92, 71, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.56);
+}
+
+.onyomi-mode-switch__option {
+  min-height: 62px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: #7c6a5d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.onyomi-mode-switch__option.is-active {
+  background: #5f4f43;
+  color: #fffaf4;
+  box-shadow: 0 10px 20px rgba(95, 79, 67, 0.16);
+}
+
+.onyomi-mode-switch__title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.onyomi-mode-switch__subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.onyomi-legend {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #5e5045;
+  font-size: 13px;
+  border: 1px solid rgba(117, 98, 83, 0.1);
+}
+
+.onyomi-legend.is-rhyme {
+  background: rgba(241, 203, 154, 0.52);
+}
+
+.onyomi-legend.is-pinyin {
+  background: rgba(178, 204, 234, 0.58);
+}
+
+.onyomi-legend.is-kanji {
+  background: rgba(197, 220, 183, 0.68);
+}
+
+.onyomi-legend.is-onyomi {
+  background: rgba(244, 229, 144, 0.78);
+}
+
+.onyomi-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.onyomi-top-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.onyomi-practice-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.88);
+  border: 1px solid rgba(117, 98, 83, 0.12);
+  box-shadow: 0 8px 18px rgba(114, 92, 71, 0.04);
+}
+
+.onyomi-practice-switch__label {
+  color: #8d7d70;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.onyomi-toolbar__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.onyomi-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px 8px 14px;
+  border-radius: 999px;
+  background: rgba(248, 242, 234, 0.88);
+  border: 1px solid rgba(117, 98, 83, 0.1);
+  box-shadow:
+    0 10px 20px rgba(114, 92, 71, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.onyomi-selector__summary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.onyomi-selector__label {
+  color: #9a8b7f;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.onyomi-selector__value {
+  color: #55463b;
+  font-size: 16px;
+}
+
+.onyomi-filter,
+.onyomi-clear {
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 98, 83, 0.12);
+  background: rgba(255, 252, 247, 0.84);
+  color: #6c5b4f;
+  box-shadow: 0 8px 18px rgba(114, 92, 71, 0.04);
+}
+
+.onyomi-filter--expand {
+  min-width: 132px;
+}
+
+.onyomi-filter.is-active {
+  background: #5f4f43;
+  border-color: #5f4f43;
+  color: #fffaf4;
+}
+
+.onyomi-rhyme-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.86);
+  border: 1px solid rgba(117, 98, 83, 0.1);
+  box-shadow: 0 12px 24px rgba(114, 92, 71, 0.04);
+}
+
+.onyomi-filter--panel {
+  min-width: 68px;
+}
+
+.onyomi-filter.is-disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.onyomi-stage {
+  min-width: 0;
+}
+
+.onyomi-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 14px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.onyomi-workspace.is-practice-off {
+  grid-template-columns: 1fr;
+}
+
+.onyomi-graph {
+  overflow: hidden;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 252, 247, 0.8), rgba(255, 255, 255, 0) 38%),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.9), rgba(248, 242, 234, 0.74));
+  border: 1px solid rgba(117, 98, 83, 0.08);
+  min-height: 680px;
+  position: relative;
+}
+
+.onyomi-graph__canvas {
+  width: 100%;
+  height: 680px;
+  display: block;
+  cursor: grab;
+  user-select: none;
+}
+
+.onyomi-graph__canvas:active {
+  cursor: grabbing;
+}
+
+.onyomi-graph__hud {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+}
+
+.onyomi-graph__hud-button {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 98, 83, 0.12);
+  background: rgba(255, 252, 247, 0.9);
+  color: #6c5b4f;
+  box-shadow: 0 8px 18px rgba(114, 92, 71, 0.05);
+}
+
+.onyomi-graph__link {
+  stroke: rgba(181, 164, 149, 0.52);
+  stroke-width: 1.4;
+}
+
+.onyomi-graph__node {
+  transition: transform 180ms ease;
+}
+
+.onyomi-graph__node.is-clickable {
+  cursor: pointer;
+}
+
+.onyomi-graph__node circle {
+  stroke: rgba(117, 98, 83, 0.12);
+  stroke-width: 1.2;
+  filter: drop-shadow(0 8px 18px rgba(117, 98, 83, 0.12));
+}
+
+.onyomi-graph__node.is-rhyme circle {
+  fill: rgba(241, 203, 154, 0.88);
+}
+
+.onyomi-graph__node.is-pinyin circle {
+  fill: rgba(178, 204, 234, 0.88);
+}
+
+.onyomi-graph__node.is-kanji circle {
+  fill: rgba(197, 220, 183, 0.9);
+}
+
+.onyomi-graph__node.is-onyomi circle {
+  fill: rgba(244, 229, 144, 0.92);
+}
+
+.onyomi-graph__node.is-selected circle {
+  stroke: rgba(95, 79, 67, 0.5);
+  stroke-width: 2;
+}
+
+.onyomi-graph__label {
+  fill: #4f4036;
+  font-size: 16px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.onyomi-graph__count {
+  fill: #9a8b7f;
+  font-size: 11px;
+  pointer-events: none;
+}
+
+.onyomi-practice {
+  padding: 24px 26px 28px;
+  border-radius: 32px;
+  background: rgba(255, 252, 247, 0.86);
+  border: 1px solid rgba(117, 98, 83, 0.1);
+  box-shadow: 0 16px 34px rgba(114, 92, 71, 0.05);
+  position: sticky;
+  top: 96px;
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+}
+
+.onyomi-practice__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.onyomi-practice__eyebrow {
+  margin: 0 0 6px;
+  color: #9c8c80;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.onyomi-practice__header h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #4f4036;
+}
+
+.onyomi-practice__pool {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.onyomi-practice__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.onyomi-practice__reading {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(244, 229, 144, 0.78);
+  color: #665748;
+  font-size: 13px;
+}
+
+.onyomi-practice__empty {
+  margin-top: 22px;
+  padding: 24px 22px;
+  border-radius: 24px;
+  background: rgba(250, 246, 239, 0.88);
+  color: #847468;
+}
+
+.onyomi-practice__list {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.onyomi-practice__card {
+  display: grid;
+  gap: 16px;
+  padding: 18px 18px 20px;
+  border-radius: 24px;
+  background: rgba(250, 246, 239, 0.86);
+  border: 1px solid rgba(117, 98, 83, 0.08);
+}
+
+.onyomi-practice__meta {
+  margin: 0 0 8px;
+  color: #9b8b7f;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.onyomi-practice__prompt h4 {
+  margin: 0;
+  font-size: 36px;
+  color: #4f4036;
+}
+
+.onyomi-practice__words {
+  margin: 10px 0 0;
+  color: #76665a;
+  line-height: 1.8;
+}
+
+.onyomi-practice__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.onyomi-choice {
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 98, 83, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  color: #6c5b4f;
+}
+
+.onyomi-choice.is-correct {
+  background: rgba(197, 220, 183, 0.9);
+  border-color: rgba(112, 150, 97, 0.28);
+}
+
+.onyomi-choice.is-wrong {
+  background: rgba(241, 203, 154, 0.65);
+  border-color: rgba(171, 119, 67, 0.24);
 }
 
 .about-panel {
@@ -1560,6 +1988,90 @@ button {
 
   .about-creator {
     grid-template-columns: 1fr;
+  }
+
+  .onyomi-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .onyomi-hero__copy h2 {
+    font-size: 32px;
+  }
+
+  .onyomi-hero__legend {
+    justify-content: flex-start;
+  }
+
+  .onyomi-mode-switch {
+    grid-template-columns: 1fr;
+    border-radius: 28px;
+  }
+
+  .onyomi-mode-switch__option {
+    min-height: 58px;
+    border-radius: 22px;
+  }
+
+  .onyomi-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .onyomi-top-actions {
+    justify-content: flex-start;
+  }
+
+  .onyomi-selector {
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 24px;
+  }
+
+  .onyomi-selector__summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .onyomi-stage {
+    padding: 0;
+  }
+
+  .onyomi-workspace {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .onyomi-graph {
+    min-height: 0;
+  }
+
+  .onyomi-graph__canvas {
+    height: auto;
+  }
+
+  .onyomi-practice {
+    padding: 20px 18px 22px;
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .onyomi-practice__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .onyomi-practice__pool {
+    justify-content: flex-start;
+  }
+
+  .onyomi-practice__actions {
+    justify-content: flex-start;
+  }
+
+  .onyomi-practice__prompt h4 {
+    font-size: 30px;
   }
 
   .bookshelf-hero {
