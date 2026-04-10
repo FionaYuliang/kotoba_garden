@@ -3,12 +3,14 @@ import { computed, reactive, ref } from 'vue'
 
 import OnyomiGraph from '@/components/OnyomiGraph.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
+import type { OnyomiExample } from '@/config/onyomiMap'
 import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES } from '@/config/onyomiMap'
 
 const activeMode = ref<(typeof ONYOMI_MODES)[number]>('mode1')
 const activeRhyme = ref<(typeof ONYOMI_RHYMES)[number]>('ang')
-const activeOnyomi = ref('all')
+const activeOnyomi = ref(ONYOMI_EXAMPLES[0]?.onyomi ?? 'all')
 const selectedKeys = ref<string[]>([])
+const highlightedLinkKey = ref('')
 const answers = reactive<Record<string, string>>({})
 const showRhymePanel = ref(false)
 const showOnyomiPanel = ref(false)
@@ -110,7 +112,6 @@ const graphData = computed(() => {
         label: group.onyomi,
         type: 'onyomi',
         selectKey: group.onyomi,
-        itemCount: group.exampleCount,
       })
 
       pushLink(pinyinId, kanjiId)
@@ -137,7 +138,6 @@ const graphData = computed(() => {
         label: [...group.pinyins].sort().join(' / '),
         type: 'pinyin',
         selectKey: group.onyomi,
-        itemCount: group.pinyins.size,
       })
 
       pushLink(onyomiId, kanjiId)
@@ -153,14 +153,6 @@ const graphData = computed(() => {
 
 const selectedExamples = computed(() => {
   return filteredExamples.value.filter((item) => selectedKeys.value.includes(item.onyomi))
-})
-
-const practiceChoices = computed(() => {
-  if (activeMode.value === 'mode1') {
-    return [...new Set(selectedExamples.value.map((item) => item.onyomi))]
-  }
-
-  return [...new Set(selectedExamples.value.map((item) => item.pinyin))]
 })
 
 function toggleSelection(key: string) {
@@ -179,6 +171,40 @@ function toggleSelection(key: string) {
 
 function chooseAnswer(exampleId: string, value: string) {
   answers[exampleId] = value
+}
+
+function addSelection(key: string) {
+  if (!selectedKeys.value.includes(key)) {
+    selectedKeys.value = [...selectedKeys.value, key]
+  }
+}
+
+function handleKanjiGroupSelect(key: string) {
+  if (activeMode.value !== 'mode1') {
+    return
+  }
+
+  highlightedLinkKey.value = key
+
+  if (practiceEnabled.value) {
+    addSelection(key)
+  }
+}
+
+function getPracticeChoices(example: OnyomiExample) {
+  if (activeMode.value === 'mode1') {
+    const choices = [...new Set(filteredExamples.value
+      .filter((item) => item.pinyin === example.pinyin)
+      .map((item) => item.onyomi))]
+
+    return choices.includes(example.onyomi) ? choices : [example.onyomi, ...choices]
+  }
+
+  const choices = [...new Set(filteredExamples.value
+    .filter((item) => item.onyomi === example.onyomi)
+    .map((item) => item.pinyin))]
+
+  return choices.includes(example.pinyin) ? choices : [example.pinyin, ...choices]
 }
 
 function clearPractice() {
@@ -210,9 +236,10 @@ function clearPractice() {
             :class="{ 'is-active': activeMode === mode }" type="button" @click="
               activeMode = mode;
             activeRhyme = 'ang';
-            activeOnyomi = 'all';
+            activeOnyomi = onyomiFilters.find((item) => item !== 'all') ?? 'all';
             showRhymePanel = false;
             showOnyomiPanel = false;
+            highlightedLinkKey = '';
             clearPractice();
             ">
             <span class="onyomi-mode-switch__title">
@@ -300,8 +327,8 @@ function clearPractice() {
         <div class="onyomi-workspace" :class="{ 'is-practice-off': !practiceEnabled }">
           <section class="onyomi-stage">
             <OnyomiGraph :nodes="graphData.nodes" :links="graphData.links" :selected-keys="selectedKeys"
-              :clickable-type="activeMode === 'mode1' ? 'onyomi' : 'pinyin'" :mode="activeMode"
-              @select-key="toggleSelection" />
+              :clickable-type="activeMode === 'mode1' ? 'onyomi' : 'pinyin'" :mode="activeMode" :active-link-key="highlightedLinkKey"
+              @select-key="toggleSelection" @select-kanji-group="handleKanjiGroupSelect" />
           </section>
 
           <aside v-if="practiceEnabled" class="onyomi-practice">
@@ -313,17 +340,17 @@ function clearPractice() {
                 <h3>练习区</h3>
               </div>
 
-              <div class="onyomi-practice__pool">
-                <span v-for="key in selectedKeys" :key="key" class="onyomi-practice__reading">
-                  {{ key }}
-                </span>
+              <div class="onyomi-practice__actions">
+                <button class="onyomi-clear" type="button" @click="clearPractice">
+                  清空
+                </button>
               </div>
             </div>
 
-            <div class="onyomi-practice__actions">
-              <button class="onyomi-clear" type="button" @click="clearPractice">
-                清空练习区
-              </button>
+            <div class="onyomi-practice__pool">
+              <span v-for="key in selectedKeys" :key="key" class="onyomi-practice__reading">
+                {{ key }}
+              </span>
             </div>
 
             <div v-if="!selectedExamples.length" class="onyomi-practice__empty">
@@ -335,16 +362,12 @@ function clearPractice() {
             <div v-else class="onyomi-practice__list">
               <article v-for="example in selectedExamples" :key="example.id" class="onyomi-practice__card">
                 <div class="onyomi-practice__prompt">
-                  <p class="onyomi-practice__meta">
-                    {{ activeMode === 'mode1' ? `${example.rhyme} · ${example.pinyin}` : `${example.onyomi} ·
-                    ${example.rhyme}` }}
-                  </p>
                   <h4>{{ example.kanji }}</h4>
                   <p class="onyomi-practice__words">{{ example.japaneseWords.join(' / ') }}</p>
                 </div>
 
                 <div class="onyomi-practice__choices">
-                  <button v-for="choice in practiceChoices" :key="`${example.id}-${choice}`" class="onyomi-choice" :class="{
+                  <button v-for="choice in getPracticeChoices(example)" :key="`${example.id}-${choice}`" class="onyomi-choice" :class="{
                     'is-correct': answers[example.id] === choice && choice === (activeMode === 'mode1' ? example.onyomi : example.pinyin),
                     'is-wrong': answers[example.id] === choice && choice !== (activeMode === 'mode1' ? example.onyomi : example.pinyin),
                   }" type="button" @click="chooseAnswer(example.id, choice)">

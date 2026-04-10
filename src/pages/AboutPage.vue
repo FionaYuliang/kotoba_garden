@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import SiteHeader from '@/components/SiteHeader.vue'
+import wechatQrImage from '@/assets/wechat-qr.jpeg'
+
+const wechatContact = '请替换为你的微信号'
 </script>
 
 <template>
@@ -14,14 +17,17 @@ import SiteHeader from '@/components/SiteHeader.vue'
             <h3>关于我</h3>
           </div>
 
-          <div class="about-creator">
+          <div class="about-creator" tabindex="0">
+            <div class="about-wechat-card">
+              <div class="about-wechat-card__qr">
+                <img :src="wechatQrImage" alt="微信二维码" />
+              </div>
+            </div>
+
             <article class="about-card about-card--wide">
               <h3>@言葉の羽音</h3>
               <p>
                 主业码农，喜欢汉字和日语语言文化，自然博物爱好者。
-              </p>
-              <p>
-
               </p>
             </article>
 

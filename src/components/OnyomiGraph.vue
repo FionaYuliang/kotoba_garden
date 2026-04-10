@@ -24,12 +24,14 @@ const props = defineProps<{
   nodes: OnyomiGraphNode[]
   links: OnyomiGraphLink[]
   selectedKeys: string[]
+  activeLinkKey: string
   clickableType: 'onyomi' | 'pinyin'
   mode: 'mode1' | 'mode2'
 }>()
 
 const emit = defineEmits<{
   selectKey: [key: string]
+  selectKanjiGroup: [key: string]
 }>()
 
 const width = 1320
@@ -108,6 +110,31 @@ function getGroupKey(nodeId: string) {
   }
 
   return nodeId
+}
+
+function getLinkKey(link: OnyomiGraphLink) {
+  const sourceId = typeof link.source === 'object' ? link.source.id : link.source
+  const targetId = typeof link.target === 'object' ? link.target.id : link.target
+
+  return getGroupKey(sourceId || targetId)
+}
+
+function isNodeInActiveLink(node: OnyomiGraphNode) {
+  if (props.mode !== 'mode1' || !props.activeLinkKey) {
+    return false
+  }
+
+  return getGroupKey(node.id) === props.activeLinkKey
+}
+
+function handleNodeClick(node: OnyomiGraphNode) {
+  if (node.type === props.clickableType && node.selectKey) {
+    emit('selectKey', node.selectKey)
+  }
+
+  if (props.mode === 'mode1' && node.type === 'kanji') {
+    emit('selectKanjiGroup', getGroupKey(node.id))
+  }
 }
 
 function createLayout() {
@@ -261,6 +288,9 @@ onMounted(() => {
           v-for="(link, index) in positionedLinks"
           :key="`${index}-${typeof link.source === 'object' ? link.source.id : link.source}`"
           class="onyomi-graph__link"
+          :class="{
+            'is-selected': props.mode === 'mode1' && getLinkKey(link) === props.activeLinkKey,
+          }"
           :x1="typeof link.source === 'object' ? link.source.x ?? 0 : 0"
           :y1="typeof link.source === 'object' ? link.source.y ?? 0 : 0"
           :x2="typeof link.target === 'object' ? link.target.x ?? 0 : 0"
@@ -275,11 +305,13 @@ onMounted(() => {
             `is-${node.type}`,
             {
               'is-selected': node.selectKey && props.selectedKeys.includes(node.selectKey),
+              'is-link-active': isNodeInActiveLink(node),
               'is-clickable': node.type === props.clickableType,
+              'is-group-clickable': props.mode === 'mode1' && node.type === 'kanji',
             },
           ]"
           :transform="`translate(${node.x ?? 0}, ${node.y ?? 0})`"
-          @click="node.type === props.clickableType && node.selectKey ? emit('selectKey', node.selectKey) : undefined"
+          @click="handleNodeClick(node)"
         >
           <template v-if="node.type === 'pinyin' || node.type === 'kanji'">
             <rect
@@ -304,14 +336,6 @@ onMounted(() => {
             >
               {{ line }}
             </tspan>
-          </text>
-          <text
-            v-if="node.type === props.clickableType && node.itemCount"
-            class="onyomi-graph__count"
-            text-anchor="middle"
-            :dy="node.type === 'pinyin' ? getNodeBlockSize(node).height / 2 + 20 : 42"
-          >
-            {{ node.itemCount }}组
           </text>
         </g>
       </g>
