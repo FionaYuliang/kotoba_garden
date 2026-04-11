@@ -4,7 +4,7 @@ import { computed, reactive, ref } from 'vue'
 import OnyomiGraph from '@/components/OnyomiGraph.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
 import type { OnyomiExample, OnyomiKey } from '@/config/onyomiMap'
-import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES, onyomiOrder } from '@/config/onyomiMap'
+import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES, onyomiOrder, onyomiOrderWithCounts } from '@/config/onyomiMap'
 
 const activeMode = ref<(typeof ONYOMI_MODES)[number]>('mode1')
 const activeRhyme = ref<(typeof ONYOMI_RHYMES)[number]>('ang')
@@ -36,6 +36,16 @@ const filteredExamples = computed(() => {
 const onyomiFilters = computed<(OnyomiKey | 'all')[]>(() => {
   const available = new Set(ONYOMI_EXAMPLES.map((item) => item.onyomi))
   return ['all', ...onyomiOrder.filter((item) => available.has(item))]
+})
+
+const onyomiCountMap = computed(() => {
+  const counts = new Map<OnyomiKey, number>()
+
+  for (const entry of onyomiOrderWithCounts) {
+    counts.set(entry.onyomi, entry.count)
+  }
+
+  return counts
 })
 
 const firstOnyomiFilter = computed<OnyomiKey | 'all'>(() => onyomiFilters.value.find((item) => item !== 'all') ?? 'all')
@@ -388,7 +398,7 @@ function downloadMode2Graph() {
           <button v-for="onyomi in onyomiFilters.filter((item) => item !== 'all')" :key="onyomi"
             class="onyomi-filter onyomi-filter--panel" :class="{ 'is-active': activeOnyomi === onyomi }" type="button"
             @click="activeOnyomi = onyomi; showOnyomiPanel = false; clearPractice()">
-            {{ onyomi }}
+            {{ onyomi }}（{{ onyomiCountMap.get(onyomi) ?? 0 }}）
           </button>
         </div>
 
