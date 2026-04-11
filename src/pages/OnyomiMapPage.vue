@@ -9,6 +9,7 @@ import { ONYOMI_ALL_RHYMES, ONYOMI_EXAMPLES, ONYOMI_MODES, ONYOMI_RHYMES, onyomi
 const activeMode = ref<(typeof ONYOMI_MODES)[number]>('mode1')
 const activeRhyme = ref<(typeof ONYOMI_RHYMES)[number]>('ang')
 const activeOnyomi = ref<OnyomiKey | 'all'>(onyomiOrder[0] ?? 'all')
+const graphRef = ref<InstanceType<typeof OnyomiGraph> | null>(null)
 const selectedKeys = ref<string[]>([])
 const highlightedLinkKey = ref('')
 const answers = reactive<Record<string, string>>({})
@@ -44,35 +45,78 @@ const availableRhymes = computed(() => new Set(ONYOMI_EXAMPLES.map((item) => ite
 const currentRhymeLabel = computed(() => (activeRhyme.value === 'all' ? '全部韵母' : activeRhyme.value))
 const currentOnyomiLabel = computed(() => (activeOnyomi.value === 'all' ? '全部音读' : activeOnyomi.value))
 
-const groupedByOnyomi = computed(() => {
+const groupedByOnyomiChain = computed(() => {
   const groups = new Map<
     string,
     {
+      key: string
       onyomi: string
       rhymes: Set<string>
       pinyins: Set<string>
       kanjis: Set<string>
       exampleCount: number
+      hasSpecial: boolean
     }
   >()
 
   for (const item of filteredExamples.value) {
-    const existing = groups.get(item.onyomi)
+    const chainKey = `${item.onyomi}:${item.isSpecial ? 'special' : 'default'}`
+    const existing = groups.get(chainKey)
 
     if (existing) {
       existing.rhymes.add(item.rhyme)
       existing.pinyins.add(item.pinyin)
       existing.kanjis.add(item.kanji)
       existing.exampleCount += 1
+      existing.hasSpecial = existing.hasSpecial || Boolean(item.isSpecial)
       continue
     }
 
-    groups.set(item.onyomi, {
+    groups.set(chainKey, {
+      key: chainKey,
       onyomi: item.onyomi,
       rhymes: new Set([item.rhyme]),
       pinyins: new Set([item.pinyin]),
       kanjis: new Set([item.kanji]),
       exampleCount: 1,
+      hasSpecial: Boolean(item.isSpecial),
+    })
+  }
+
+  return [...groups.values()]
+})
+
+const groupedByOnyomiAndRhymeChain = computed(() => {
+  const groups = new Map<
+    string,
+    {
+      key: string
+      onyomi: string
+      rhyme: string
+      pinyins: Set<string>
+      kanjis: Set<string>
+      hasSpecial: boolean
+    }
+  >()
+
+  for (const item of filteredExamples.value) {
+    const chainKey = `${item.onyomi}:${item.rhyme}:${item.isSpecial ? 'special' : 'default'}`
+    const existing = groups.get(chainKey)
+
+    if (existing) {
+      existing.pinyins.add(item.pinyin)
+      existing.kanjis.add(item.kanji)
+      existing.hasSpecial = existing.hasSpecial || Boolean(item.isSpecial)
+      continue
+    }
+
+    groups.set(chainKey, {
+      key: chainKey,
+      onyomi: item.onyomi,
+      rhyme: item.rhyme,
+      pinyins: new Set([item.pinyin]),
+      kanjis: new Set([item.kanji]),
+      hasSpecial: Boolean(item.isSpecial),
     })
   }
 
@@ -80,7 +124,7 @@ const groupedByOnyomi = computed(() => {
 })
 
 const graphData = computed(() => {
-  const nodesMap = new Map<string, { id: string; label: string; type: 'rhyme' | 'pinyin' | 'kanji' | 'onyomi'; selectKey?: string; itemCount?: number }>()
+  const nodesMap = new Map<string, { id: string; label: string; type: 'rhyme' | 'pinyin' | 'kanji' | 'onyomi'; selectKey?: string; itemCount?: number; isSpecial?: boolean }>()
   const links: { source: string; target: string }[] = []
   const linkKeys = new Set<string>()
 
@@ -95,56 +139,62 @@ const graphData = computed(() => {
   }
 
   if (activeMode.value === 'mode1') {
-    for (const group of groupedByOnyomi.value) {
+    for (const group of groupedByOnyomiChain.value) {
       const onyomiId = `onyomi:${group.onyomi}`
-      const pinyinId = `pinyin-group:${group.onyomi}`
-      const kanjiId = `kanji-group:${group.onyomi}`
+      const pinyinId = `pinyin-group:${group.key}`
+      const kanjiId = `kanji-group:${group.key}`
 
       nodesMap.set(pinyinId, {
         id: pinyinId,
         label: [...group.pinyins].sort().join(' / '),
         type: 'pinyin',
+        isSpecial: group.hasSpecial,
       })
       nodesMap.set(kanjiId, {
         id: kanjiId,
         label: [...group.kanjis].sort().join(' / '),
         type: 'kanji',
+        isSpecial: group.hasSpecial,
       })
       nodesMap.set(onyomiId, {
         id: onyomiId,
         label: group.onyomi,
         type: 'onyomi',
         selectKey: group.onyomi,
+        isSpecial: group.hasSpecial,
       })
 
       pushLink(pinyinId, kanjiId)
       pushLink(kanjiId, onyomiId)
     }
   } else {
-    for (const group of groupedByOnyomi.value) {
+    for (const group of groupedByOnyomiAndRhymeChain.value) {
       const onyomiId = `onyomi:${group.onyomi}`
-      const kanjiId = `kanji-group:${group.onyomi}`
-      const pinyinId = `pinyin-group:${group.onyomi}`
+      const pinyinId = `pinyin-group:${group.key}`
+      const kanjiId = `kanji-group:${group.key}`
 
       nodesMap.set(onyomiId, {
         id: onyomiId,
         label: group.onyomi,
         type: 'onyomi',
+        isSpecial: group.hasSpecial,
+      })
+      nodesMap.set(pinyinId, {
+        id: pinyinId,
+        label: `${group.rhyme} · ${Array.from(group.pinyins).sort().join(' / ')}`,
+        type: 'pinyin',
+        selectKey: group.onyomi,
+        isSpecial: group.hasSpecial,
       })
       nodesMap.set(kanjiId, {
         id: kanjiId,
         label: [...group.kanjis].sort().join(' / '),
         type: 'kanji',
-      })
-      nodesMap.set(pinyinId, {
-        id: pinyinId,
-        label: [...group.pinyins].sort().join(' / '),
-        type: 'pinyin',
-        selectKey: group.onyomi,
+        isSpecial: group.hasSpecial,
       })
 
-      pushLink(onyomiId, kanjiId)
-      pushLink(kanjiId, pinyinId)
+      pushLink(onyomiId, pinyinId)
+      pushLink(pinyinId, kanjiId)
     }
   }
 
@@ -216,6 +266,15 @@ function clearPractice() {
     delete answers[key]
   }
 }
+
+function downloadMode2Graph() {
+  if (activeMode.value !== 'mode2') {
+    return
+  }
+
+  const fileLabel = activeOnyomi.value === 'all' ? 'all' : activeOnyomi.value
+  graphRef.value?.downloadAsImage?.(`onyomi-mode2-${fileLabel}.png`)
+}
 </script>
 
 <template>
@@ -284,6 +343,14 @@ function clearPractice() {
           </div>
 
           <div class="onyomi-toolbar__group onyomi-toolbar__group--actions">
+            <button
+              v-if="activeMode === 'mode2'"
+              class="onyomi-filter"
+              type="button"
+              @click="downloadMode2Graph"
+            >
+              下载图谱
+            </button>
             <label class="onyomi-practice-switch">
               <span class="onyomi-practice-switch__label">开启练习</span>
               <button
@@ -327,7 +394,18 @@ function clearPractice() {
 
         <div class="onyomi-workspace" :class="{ 'is-practice-off': !practiceEnabled }">
           <section class="onyomi-stage">
-            <OnyomiGraph :nodes="graphData.nodes" :links="graphData.links" :selected-keys="selectedKeys"
+            <div class="onyomi-legend">
+              <span class="onyomi-legend__label">图例</span>
+              <span class="onyomi-legend__item">
+                <span class="onyomi-legend__swatch is-normal" />
+                普通
+              </span>
+              <span class="onyomi-legend__item">
+                <span class="onyomi-legend__swatch is-special" />
+                特例
+              </span>
+            </div>
+            <OnyomiGraph ref="graphRef" :nodes="graphData.nodes" :links="graphData.links" :selected-keys="selectedKeys"
               :clickable-type="activeMode === 'mode1' ? 'onyomi' : 'pinyin'" :mode="activeMode" :active-link-key="highlightedLinkKey"
               @select-key="toggleSelection" @select-kanji-group="handleKanjiGroupSelect" />
           </section>
@@ -364,7 +442,7 @@ function clearPractice() {
               </div>
 
               <div v-else class="onyomi-practice__list">
-                <article v-for="example in selectedExamples" :key="example.id" class="onyomi-practice__card">
+                <article v-for="example in selectedExamples" :key="example.id" class="onyomi-practice__card" :class="{ 'is-special': example.isSpecial }">
                   <div class="onyomi-practice__prompt">
                     <h4>{{ example.kanji }}</h4>
                     <p class="onyomi-practice__words">{{ example.japaneseWords.join(' / ') }}</p>

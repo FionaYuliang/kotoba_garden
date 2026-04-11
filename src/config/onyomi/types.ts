@@ -5,6 +5,7 @@ export type OnyomiExample = {
   kanji: string
   onyomi: string
   japaneseWords: string[]
+  isSpecial?: boolean
 }
 
 export type OnyomiRhymeDataset = {

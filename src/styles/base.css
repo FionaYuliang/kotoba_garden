@@ -381,6 +381,49 @@ button {
   min-width: 0;
 }
 
+.onyomi-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 20px;
+  background: rgba(255, 252, 247, 0.78);
+  border: 1px solid rgba(117, 98, 83, 0.08);
+  box-shadow: 0 10px 20px rgba(114, 92, 71, 0.04);
+}
+
+.onyomi-legend__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a6657;
+}
+
+.onyomi-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #5c4d43;
+}
+
+.onyomi-legend__swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 98, 83, 0.14);
+  box-shadow: 0 6px 12px rgba(117, 98, 83, 0.08);
+}
+
+.onyomi-legend__swatch.is-normal {
+  background: linear-gradient(135deg, rgba(178, 204, 234, 0.94), rgba(197, 220, 183, 0.94));
+}
+
+.onyomi-legend__swatch.is-special {
+  background: linear-gradient(135deg, rgba(231, 171, 160, 0.96), rgba(247, 196, 146, 0.96));
+}
+
 .onyomi-workspace {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
@@ -394,19 +437,21 @@ button {
 }
 
 .onyomi-graph {
-  overflow: hidden;
+  overflow: auto;
   border-radius: 34px;
   background:
     radial-gradient(circle at 50% 0%, rgba(255, 252, 247, 0.8), rgba(255, 255, 255, 0) 38%),
     linear-gradient(180deg, rgba(255, 252, 247, 0.9), rgba(248, 242, 234, 0.74));
   border: 1px solid rgba(117, 98, 83, 0.08);
   min-height: 680px;
+  max-height: 760px;
   position: relative;
 }
 
 .onyomi-graph__canvas {
   width: 100%;
-  height: 680px;
+  height: auto;
+  min-height: 680px;
   display: block;
   cursor: grab;
   user-select: none;
@@ -490,13 +535,27 @@ button {
   fill: rgba(178, 204, 234, 0.88);
 }
 
+.onyomi-graph__node.is-pinyin.is-special circle,
+.onyomi-graph__node.is-pinyin.is-special rect {
+  fill: rgba(231, 171, 160, 0.92);
+}
+
 .onyomi-graph__node.is-kanji circle,
 .onyomi-graph__node.is-kanji rect {
   fill: rgba(197, 220, 183, 0.9);
 }
 
+.onyomi-graph__node.is-kanji.is-special circle,
+.onyomi-graph__node.is-kanji.is-special rect {
+  fill: rgba(239, 182, 160, 0.94);
+}
+
 .onyomi-graph__node.is-onyomi circle {
   fill: rgba(244, 229, 144, 0.92);
+}
+
+.onyomi-graph__node.is-onyomi.is-special circle {
+  fill: rgba(247, 196, 146, 0.95);
 }
 
 .onyomi-graph__node.is-selected circle,
@@ -616,6 +675,12 @@ button {
   border-radius: 24px;
   background: rgba(250, 246, 239, 0.86);
   border: 1px solid rgba(117, 98, 83, 0.08);
+}
+
+.onyomi-practice__card.is-special {
+  background: rgba(255, 244, 238, 0.92);
+  border-color: rgba(199, 106, 72, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(228, 152, 125, 0.12);
 }
 
 .onyomi-practice__meta {

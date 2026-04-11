@@ -9,6 +9,7 @@ type OnyomiGraphNode = {
   type: 'rhyme' | 'pinyin' | 'kanji' | 'onyomi'
   selectKey?: string
   itemCount?: number
+  isSpecial?: boolean
   x?: number
   y?: number
   vx?: number
@@ -35,13 +36,15 @@ const emit = defineEmits<{
 }>()
 
 const width = 1320
-const height = 680
+const baseHeight = 680
+const maxCanvasHeight = 920
 const minScale = 0.55
 const maxScale = 3.2
 const localNodes = ref<OnyomiGraphNode[]>([])
 const localLinks = ref<OnyomiGraphLink[]>([])
 const svgRef = ref<SVGSVGElement | null>(null)
 const viewportTransformState = ref<ZoomTransform>(zoomIdentity)
+const canvasHeight = ref(baseHeight)
 let zoomBehavior: ZoomBehavior<SVGSVGElement, unknown> | null = null
 
 const positionedNodes = computed(() => localNodes.value)
@@ -96,6 +99,14 @@ function getLabelLineOffset(index: number, total: number) {
   return index * 18 - baseline
 }
 
+function getNodeVisualHeight(node: OnyomiGraphNode) {
+  if (node.type === 'pinyin' || node.type === 'kanji') {
+    return getNodeBlockSize(node).height
+  }
+
+  return getNodeRadius(node) * 2
+}
+
 function getGroupKey(nodeId: string) {
   if (nodeId.startsWith('onyomi:')) {
     return nodeId.slice('onyomi:'.length)
@@ -107,6 +118,22 @@ function getGroupKey(nodeId: string) {
 
   if (nodeId.startsWith('pinyin-group:')) {
     return nodeId.slice('pinyin-group:'.length)
+  }
+
+  return nodeId
+}
+
+function getBaseOnyomiKey(nodeId: string) {
+  if (nodeId.startsWith('onyomi:')) {
+    return nodeId.slice('onyomi:'.length)
+  }
+
+  if (nodeId.startsWith('kanji-group:')) {
+    return nodeId.slice('kanji-group:'.length).split(':')[0]
+  }
+
+  if (nodeId.startsWith('pinyin-group:')) {
+    return nodeId.slice('pinyin-group:'.length).split(':')[0]
   }
 
   return nodeId
@@ -148,9 +175,9 @@ function createLayout() {
         }
       : {
           rhyme: width * 0.12,
-          onyomi: width * 0.18,
-          kanji: width * 0.5,
-          pinyin: width * 0.82,
+          onyomi: width * 0.16,
+          pinyin: width * 0.48,
+          kanji: width * 0.8,
         }
 
   const sortedNodes = [...props.nodes].sort((a, b) => {
@@ -162,16 +189,37 @@ function createLayout() {
   const uniqueGroups = [...new Set(sortedNodes.map((node) => getGroupKey(node.id)))]
   const topPadding = 78
   const bottomPadding = 78
-  const availableHeight = Math.max(120, height - topPadding - bottomPadding)
-  const groupSpacing = uniqueGroups.length > 1 ? availableHeight / (uniqueGroups.length - 1) : 0
   const groupY = new Map<string, number>()
+  const groupHeights = uniqueGroups.map((group) => {
+    const groupNodes = sortedNodes.filter((node) => getGroupKey(node.id) === group)
+    const tallestNode = Math.max(...groupNodes.map((node) => getNodeVisualHeight(node)), 56)
+    return tallestNode + 26
+  })
 
+  const totalContentHeight = groupHeights.reduce((sum, value) => sum + value, 0)
+  canvasHeight.value = Math.min(maxCanvasHeight, Math.max(baseHeight, topPadding + bottomPadding + totalContentHeight))
+
+  let cursorY = topPadding
   uniqueGroups.forEach((group, index) => {
-    groupY.set(group, topPadding + index * groupSpacing)
+    const groupHeight = groupHeights[index]
+    groupY.set(group, cursorY + groupHeight / 2)
+    cursorY += groupHeight
   })
 
   const nodes = sortedNodes.map((node) => {
-    const y = groupY.get(getGroupKey(node.id)) ?? height / 2
+    let y = groupY.get(getGroupKey(node.id)) ?? canvasHeight.value / 2
+
+    if (node.type === 'onyomi') {
+      const relatedYs = sortedNodes
+        .filter((item) => item.type !== 'onyomi' && getBaseOnyomiKey(item.id) === node.id.slice('onyomi:'.length))
+        .map((item) => groupY.get(getGroupKey(item.id)))
+        .filter((value): value is number => typeof value === 'number')
+
+      if (relatedYs.length > 0) {
+        y = relatedYs.reduce((sum, value) => sum + value, 0) / relatedYs.length
+      }
+    }
+
     return {
       ...node,
       x: columnX[node.type],
@@ -257,8 +305,121 @@ function resetViewport() {
   select(svgRef.value).call(zoomBehavior.transform, zoomIdentity)
 }
 
+async function downloadAsImage(filename = 'onyomi-graph.png') {
+  if (!svgRef.value) {
+    return
+  }
+
+  const sourceSvg = svgRef.value
+  const clonedSvg = sourceSvg.cloneNode(true) as SVGSVGElement
+  clonedSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+  clonedSvg.setAttribute('width', String(width))
+  clonedSvg.setAttribute('height', String(canvasHeight.value))
+
+  const style = document.createElementNS('http://www.w3.org/2000/svg', 'style')
+  style.textContent = `
+    .onyomi-graph__link {
+      stroke: rgba(181, 164, 149, 0.52);
+      stroke-width: 1.4;
+    }
+    .onyomi-graph__link.is-selected {
+      stroke: rgba(95, 79, 67, 0.78);
+      stroke-width: 2.6;
+    }
+    .onyomi-graph__node circle,
+    .onyomi-graph__node rect {
+      stroke: rgba(117, 98, 83, 0.12);
+      stroke-width: 1.2;
+    }
+    .onyomi-graph__node.is-rhyme circle {
+      fill: rgba(241, 203, 154, 0.88);
+    }
+    .onyomi-graph__node.is-pinyin circle,
+    .onyomi-graph__node.is-pinyin rect {
+      fill: rgba(178, 204, 234, 0.88);
+    }
+    .onyomi-graph__node.is-pinyin.is-special circle,
+    .onyomi-graph__node.is-pinyin.is-special rect {
+      fill: rgba(231, 171, 160, 0.92);
+    }
+    .onyomi-graph__node.is-kanji circle,
+    .onyomi-graph__node.is-kanji rect {
+      fill: rgba(197, 220, 183, 0.9);
+    }
+    .onyomi-graph__node.is-kanji.is-special circle,
+    .onyomi-graph__node.is-kanji.is-special rect {
+      fill: rgba(239, 182, 160, 0.94);
+    }
+    .onyomi-graph__node.is-onyomi circle {
+      fill: rgba(244, 229, 144, 0.92);
+    }
+    .onyomi-graph__node.is-onyomi.is-special circle {
+      fill: rgba(247, 196, 146, 0.95);
+    }
+    .onyomi-graph__node.is-selected circle,
+    .onyomi-graph__node.is-selected rect {
+      stroke: rgba(95, 79, 67, 0.5);
+      stroke-width: 2;
+    }
+    .onyomi-graph__node.is-link-active circle,
+    .onyomi-graph__node.is-link-active rect {
+      stroke: rgba(95, 79, 67, 0.62);
+      stroke-width: 2.4;
+    }
+    .onyomi-graph__label {
+      fill: #4f4036;
+      font-size: 16px;
+      font-weight: 600;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      font-family: "Hiragino Sans GB", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    }
+  `
+
+  clonedSvg.insertBefore(style, clonedSvg.firstChild)
+
+  const serialized = new XMLSerializer().serializeToString(clonedSvg)
+  const blob = new Blob([serialized], { type: 'image/svg+xml;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+
+  try {
+    const image = await new Promise<HTMLImageElement>((resolve, reject) => {
+      const img = new Image()
+      img.onload = () => resolve(img)
+      img.onerror = () => reject(new Error('failed to load graph image'))
+      img.src = url
+    })
+
+    const canvas = document.createElement('canvas')
+    canvas.width = width * 2
+    canvas.height = canvasHeight.value * 2
+
+    const context = canvas.getContext('2d')
+    if (!context) {
+      return
+    }
+
+    context.scale(2, 2)
+    context.fillStyle = '#fffaf5'
+    context.fillRect(0, 0, width, canvasHeight.value)
+    context.drawImage(image, 0, 0, width, canvasHeight.value)
+
+    const downloadUrl = canvas.toDataURL('image/png')
+    const link = document.createElement('a')
+    link.href = downloadUrl
+    link.download = filename
+    link.click()
+  } finally {
+    URL.revokeObjectURL(url)
+  }
+}
+
 onMounted(() => {
   setupZoom()
+})
+
+defineExpose({
+  downloadAsImage,
 })
 </script>
 
@@ -279,7 +440,8 @@ onMounted(() => {
     <svg
       ref="svgRef"
       class="onyomi-graph__canvas"
-      :viewBox="`0 0 ${width} ${height}`"
+      :viewBox="`0 0 ${width} ${canvasHeight}`"
+      :style="{ height: `${canvasHeight}px` }"
       role="img"
       aria-label="音读关系图谱"
     >
@@ -308,6 +470,7 @@ onMounted(() => {
               'is-link-active': isNodeInActiveLink(node),
               'is-clickable': node.type === props.clickableType,
               'is-group-clickable': props.mode === 'mode1' && node.type === 'kanji',
+              'is-special': node.isSpecial,
             },
           ]"
           :transform="`translate(${node.x ?? 0}, ${node.y ?? 0})`"
